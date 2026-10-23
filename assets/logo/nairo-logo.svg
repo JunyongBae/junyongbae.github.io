@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 55 840 300" width="840" height="300" font-family="'Pretendard Variable','Pretendard','Apple SD Gothic Neo','Noto Sans KR','Helvetica Neue',Arial,sans-serif">
+  <text x="305" y="230" text-anchor="end" font-size="120" font-weight="800" fill="#00468B">N</text>
+  <path d="M317,230 L317,180 A58,58 0 0 1 433,180 L433,230" fill="none" stroke="#1FA5DB" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round"/>
+  <text x="375" y="219" text-anchor="middle" font-size="80" font-weight="800" fill="#1FA5DB" letter-spacing="1">AI</text>
+  <text x="445" y="230" text-anchor="start" font-size="120" font-weight="800" fill="#00468B">RO</text>
+  <text x="420" y="280" text-anchor="middle" font-size="19" fill="#00468B" letter-spacing="3">NUCLEAR AI FOR RISK &amp; OPERATIONS</text>
+  <text x="420" y="314" text-anchor="middle" font-size="17" fill="#6b7280" letter-spacing="1">원자력 AI 리스크·운전 연구실</text>
+</svg>

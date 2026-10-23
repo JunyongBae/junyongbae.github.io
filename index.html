@@ -3,522 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Junyong Bae — Nuclear Engineering × AI</title>
-<meta name="description" content="Junyong Bae, postdoctoral researcher at KAERI. AI for nuclear power plant safety: agentic PSA, operator support systems, and trustworthy AI with quantified uncertainty.">
-<meta name="author" content="Junyong Bae">
+<title>NAIRO Lab — Nuclear AI for Risk &amp; Operations Lab</title>
+<meta name="description" content="NAIRO Lab (Nuclear AI for Risk &amp; Operations Lab) develops trustworthy AI for nuclear power plant safety: operator support systems, dynamic and agentic PSA, and AI with quantified uncertainty.">
 
 <!-- link previews (Slack, KakaoTalk, X, LinkedIn) -->
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Junyong Bae — Nuclear Engineering × AI">
-<meta property="og:description" content="Postdoctoral researcher at KAERI. AI for nuclear power plant safety: agentic PSA, operator support systems, and trustworthy AI with quantified uncertainty.">
-<meta property="og:image" content="https://junyongbae.github.io/figures/asoc-twostage.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NAIRO Lab">
+<meta property="og:title" content="NAIRO Lab — Nuclear AI for Risk &amp; Operations Lab">
+<meta property="og:description" content="Trustworthy AI for nuclear power plant safety: operator support systems, dynamic and agentic PSA, and AI with quantified uncertainty.">
+<meta property="og:image" content="https://junyongbae.github.io/assets/logo/nairo-og.png">
 <meta property="og:url" content="https://junyongbae.github.io/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F5A8A'/><text x='16' y='23' font-size='15' font-family='Helvetica,Arial,sans-serif' font-weight='700' text-anchor='middle' fill='%23ffffff'>JB</text></svg>">
+<link rel="icon" type="image/png" href="assets/logo/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="canonical" href="https://junyongbae.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "Nuclear AI for Risk & Operations Lab",
+  "alternateName": "NAIRO Lab",
+  "url": "https://junyongbae.github.io/",
+  "email": "mailto:junyong8090@changwon.ac.kr",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Changwon National University",
+    "url": "https://www.changwon.ac.kr/"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Junyong Bae",
+    "url": "https://junyongbae.github.io/professor.html"
+  },
+  "knowsAbout": [
+    "Nuclear engineering",
+    "Probabilistic safety assessment",
+    "Dynamic PSA",
+    "Nuclear power plant operator support systems",
+    "Deep learning",
+    "Uncertainty quantification",
+    "Explainable AI"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<style>
-:root{
-  --paper:#F4F7F9;
-  --panel:#FFFFFF;
-  --ink:#16222E;
-  --ink-soft:#46545F;
-  --line:#C8D2D9;
-  --cherenkov:#1878B4;
-  --cherenkov-deep:#0F5A8A;
-  --cherenkov-wash:#DCEEF8;
-  --amber:#A96F0B;
-  --amber-wash:#F6ECD6;
-  --display:'Pretendard Variable',Pretendard,sans-serif;
-  --body:'Pretendard Variable',Pretendard,sans-serif;
-  --mono:'Pretendard Variable',Pretendard,sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
-a{color:var(--cherenkov-deep)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--cherenkov);outline-offset:2px}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-
-/* ---------- top bar ---------- */
-.topbar{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
-.topbar .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-top:14px;padding-bottom:14px}
-.brand{font-family:var(--body);font-size:17px;letter-spacing:.06em;color:var(--ink);text-decoration:none}
-nav.menu{display:flex;gap:20px}
-nav.menu a{font-family:var(--mono);font-size:15px;letter-spacing:.05em;text-decoration:none;color:var(--ink-soft)}
-nav.menu a:hover{color:var(--cherenkov-deep)}
-
-/* ---------- hero ---------- */
-.hero{padding:64px 0 48px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.6vw,2.0rem);line-height:1.15;letter-spacing:-.01em}
-.hero p.lede{margin-top:18px;font-size:1.05rem;color:var(--ink-soft);max-width:46ch}
-.hero .links{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
-.hero .links a{font-family:var(--mono);font-size:12.5px;text-decoration:none;border:1px solid var(--line);background:var(--panel);
-  padding:8px 14px;border-radius:3px;color:var(--ink)}
-.hero .links a:hover{border-color:var(--cherenkov);color:var(--cherenkov-deep)}
-.trend-panel{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.trend-panel .panel-bar{display:flex;justify-content:space-between;align-items:center;
-  border-bottom:1px solid var(--line);padding:8px 12px;font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
-.trend-panel .panel-bar .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cherenkov);margin-right:6px}
-.trend-panel svg{display:block;width:100%;height:auto}
-.trend-cap{padding:8px 12px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);border-top:1px solid var(--line)}
-
-/* ---------- sections ---------- */
-section{padding:56px 0;scroll-margin-top:24px}
-.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:30px}
-.sec-head h2{font-family:var(--display);font-weight:700;font-size:1.55rem;letter-spacing:-.01em}
-.sec-head .count{font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
-.sec-head::after{content:"";flex:1;height:1px;background:var(--line)}
-
-/* ---------- experience / education ---------- */
-.track-head{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--cherenkov-deep);margin-bottom:6px}
-.track+.track-head{margin-top:30px}
-.role{display:flex;gap:18px;padding:14px 0;border-bottom:1px dashed var(--line)}
-.role .yr{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);min-width:132px;padding-top:3px;white-space:nowrap}
-.role h3{font-family:var(--display);font-size:1.02rem;font-weight:700;margin-bottom:3px}
-.role .where{font-size:.92rem;color:var(--ink-soft)}
-.role .detail{margin-top:5px;font-size:.88rem;color:var(--ink-soft)}
-
-/* ---------- interests ---------- */
-.interests{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.interest{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:18px}
-.interest h3{font-family:var(--display);font-size:1.02rem;font-weight:700;margin-bottom:6px}
-.interest p{font-size:.9rem;color:var(--ink-soft)}
-
-/* ---------- publications ---------- */
-.pub{display:grid;grid-template-columns:300px 1fr;gap:26px;padding:26px 0;border-bottom:1px solid var(--line)}
-.pub:last-child{border-bottom:none}
-.figframe{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;align-self:start}
-.figframe img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#fff}
-.figframe .figcap{border-top:1px solid var(--line);padding:6px 10px;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft)}
-.fig-missing{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
-  background:repeating-linear-gradient(45deg,#F7FAFC,#F7FAFC 10px,#EFF4F7 10px,#EFF4F7 20px);
-  font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
-.pub .meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--cherenkov-deep);margin-bottom:8px}
-.pub .meta .tag{display:inline-block;border-radius:3px;padding:1px 7px;margin-left:8px;font-size:10.5px}
-.tag.review{background:var(--amber-wash);color:var(--amber)}
-.tag.pub{background:var(--cherenkov-wash);color:var(--cherenkov-deep)}
-.pub h3{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.35;margin-bottom:8px}
-.pub h3 a{color:inherit;text-decoration:none}
-.pub h3 a:hover{color:var(--cherenkov-deep);text-decoration:underline}
-.pub .authors{font-size:.92rem;color:var(--ink-soft)}
-.pub .authors b{color:var(--ink);font-weight:600}
-.pub .note{margin-top:8px;font-size:.88rem;color:var(--ink-soft)}
-
-/* ---------- conferences / awards ---------- */
-.list-two{display:grid;grid-template-columns:1fr 1fr;gap:6px 36px}
-.item{padding:10px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
-.item .yr{font-family:var(--mono);font-size:11px;color:var(--cherenkov-deep);margin-right:8px}
-.item .venue{color:var(--ink-soft)}
-.item .awarded{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:3px;white-space:nowrap;
-  background:var(--amber-wash);color:var(--amber);font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-decoration:none}
-.item .awarded:hover{background:var(--amber);color:var(--panel)}
-.award{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
-.award .yr{font-family:var(--mono);font-size:12px;color:var(--cherenkov-deep);min-width:62px}
-.award p{font-size:.94rem}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:36px 0 48px;margin-top:24px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-  font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
-
-/* ---------- motion ---------- */
-@media (prefers-reduced-motion:no-preference){
-  .band{animation:fadein 1.2s ease .3s both}
-  @keyframes fadein{from{opacity:0}to{opacity:1}}
-}
-/* ---------- responsive ---------- */
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr}
-  .interests{grid-template-columns:1fr}
-  .pub{grid-template-columns:1fr}
-  .figframe{max-width:420px}
-  .list-two{grid-template-columns:1fr}
-  .role{flex-direction:column;gap:4px}
-  /* keep the nav on small screens: let it scroll sideways instead of disappearing */
-  .topbar .wrap{flex-wrap:wrap}
-  nav.menu{width:100%;gap:16px;overflow-x:auto;scrollbar-width:none;
-    padding-bottom:2px;-webkit-overflow-scrolling:touch}
-  nav.menu::-webkit-scrollbar{display:none}
-  nav.menu a{font-size:13px;white-space:nowrap}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css?v=20261023h">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js?v=20261023h" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="#top">Junyong Bae</a>
-    <nav class="menu" aria-label="Sections">
-      <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#conferences">Conferences</a>
-      <a href="#awards">Awards</a>
+    <a class="brand" href="index.html"><img src="assets/logo/nairo-wordmark.png" alt="NAIRO Lab" width="87" height="30"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span>Menu</button>
+    <nav class="menu" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li class="has-sub">
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-team"><span class="lbl">Team</span><svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="sub" id="sub-team">
+            <li><a href="professor.html">Professor</a></li>
+            <li><a href="members.html">Members</a></li>
+          </ul>
+        </li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>AI that keeps nuclear power plants safe — with its trustworthiness quantified.</h1>
-      <p class="lede">I am Junyong Bae. I build deep-learning methods for NPP safety:
-      risk assessment and operator support systems built on trustworthy AI.</p>
-      <div class="links">
-        <a href="https://scholar.google.com/citations?user=5RxgABAAAAAJ&amp;hl=ko">Google Scholar</a>
-        <a href="CV_junyong.pdf">CV (PDF)</a>
-        <a href="mailto:junyong8090@kaeri.re.kr">Email</a>
-      </div>
-    </div>
+<main id="main">
 
-    <figure class="trend-panel" aria-label="Illustration: parameter trend prediction with uncertainty band">
-      <div class="panel-bar"><span><span class="dot"></span>PARAMETER TREND</span><span>PRED + CONFIDENCE INTERVAL</span></div>
-      <svg viewBox="0 0 420 240" role="img" aria-hidden="true">
-        <!-- grid -->
-        <g stroke="#E4EBEF" stroke-width="1">
-          <line x1="0" y1="60" x2="420" y2="60"/><line x1="0" y1="120" x2="420" y2="120"/><line x1="0" y1="180" x2="420" y2="180"/>
-          <line x1="105" y1="0" x2="105" y2="240"/><line x1="210" y1="0" x2="210" y2="240"/><line x1="315" y1="0" x2="315" y2="240"/>
+<section class="banner">
+  <div class="banner-grid">
+
+    <!-- left: large PWR containment dome + i-SMR building (cutaway, four modules in the pool) -->
+    <svg class="banner-art" viewBox="0 0 320 204" role="img" aria-label="Illustration: PWR containment dome and an i-SMR building">
+      <g stroke="#1FA5DB" stroke-opacity=".28" stroke-width="1" fill="#1FA5DB" fill-opacity=".35">
+        <line x1="14" y1="30" x2="58" y2="14"/><line x1="58" y1="14" x2="104" y2="34"/><line x1="14" y1="30" x2="40" y2="56"/>
+        <line x1="104" y1="34" x2="150" y2="22"/><line x1="150" y1="22" x2="196" y2="46"/><line x1="40" y1="56" x2="104" y2="34"/>
+        <circle cx="14" cy="30" r="2.5"/><circle cx="58" cy="14" r="2.5"/><circle cx="104" cy="34" r="2.5"/>
+        <circle cx="40" cy="56" r="2.5"/><circle cx="150" cy="22" r="2.5"/><circle cx="196" cy="46" r="2.5"/>
+      </g>
+      <g stroke="#2B6CA3" stroke-width="2" stroke-linejoin="round">
+        <!-- containment: cylinder + hemispherical dome -->
+        <path d="M24,196 V112 A50,50 0 0 1 124,112 V196 Z" fill="#EAF4FB"/>
+        <path d="M24,112 H124" fill="none" stroke-opacity=".5"/>
+        <path d="M44,104 A32,32 0 0 1 70,72" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+        <!-- auxiliary building -->
+        <rect x="124" y="148" width="46" height="48" fill="#FFFFFF"/>
+        <g fill="#DCEBF6" stroke="none">
+          <rect x="132" y="158" width="10" height="8"/><rect x="152" y="158" width="10" height="8"/>
+          <rect x="132" y="174" width="10" height="8"/><rect x="152" y="174" width="10" height="8"/>
         </g>
-        <!-- uncertainty band (forecast) -->
-        <polygon class="band" fill="#DCEEF8" points="230,96 260,80 300,84 340,66 380,74 412,58 412,132 380,140 340,128 300,140 260,128 230,120"/>
-        <!-- observed -->
-        <polyline fill="none" stroke="#16222E" stroke-width="2.5"
-          points="10,190 40,178 70,184 100,160 130,166 160,140 190,132 230,108"/>
-        <!-- predicted mean -->
-        <polyline fill="none" stroke="#1878B4" stroke-width="2.5" stroke-dasharray="7 6"
-          points="230,108 260,104 300,112 340,97 380,107 412,95"/>
-        <!-- t0 marker -->
-        <line x1="230" y1="14" x2="230" y2="226" stroke="#A96F0B" stroke-width="1.5" stroke-dasharray="3 4"/>
-        <circle cx="230" cy="108" r="4" fill="#1878B4"/>
+        <!-- i-SMR building, cut open to show the modules standing in the pool -->
+        <path d="M180,196 V122 L243,108 L306,122 V196 Z" fill="#FFFFFF"/>
+        <rect x="188" y="150" width="110" height="42" fill="#1FA5DB" fill-opacity=".14" stroke="none"/>
+        <g fill="#DCEBF6" stroke="#1878B4">
+          <rect x="194" y="132" width="16" height="56" rx="8"/><rect x="218" y="132" width="16" height="56" rx="8"/>
+          <rect x="252" y="132" width="16" height="56" rx="8"/><rect x="276" y="132" width="16" height="56" rx="8"/>
+        </g>
+      </g>
+      <line x1="6" y1="196" x2="314" y2="196" stroke="#2B6CA3" stroke-width="2"/>
+    </svg>
+
+    <div class="banner-text">
+      <h1>Nuclear AI for Risk &amp; Operations <span class="abbr">(NAIRO)</span> Lab</h1>
+      <hr class="banner-rule">
+      <p class="banner-ko" lang="ko">원자력 AI 리스크·운전 연구실</p>
+      <p class="banner-sub">GAST-Mechanical Engineering, Changwon National University</p>
+    </div>
+
+    <!-- right: AI chip · event tree · main control room console -->
+    <svg class="banner-art" viewBox="0 0 320 204" role="img" aria-label="Illustration: AI chip, event tree and main control room">
+      <!-- AI chip -->
+      <g stroke="#2B6CA3" stroke-width="2">
+        <g stroke-linecap="round">
+          <line x1="40" y1="12" x2="40" y2="20"/><line x1="56" y1="12" x2="56" y2="20"/><line x1="72" y1="12" x2="72" y2="20"/>
+          <line x1="40" y1="88" x2="40" y2="96"/><line x1="56" y1="88" x2="56" y2="96"/><line x1="72" y1="88" x2="72" y2="96"/>
+          <line x1="14" y1="38" x2="22" y2="38"/><line x1="14" y1="54" x2="22" y2="54"/><line x1="14" y1="70" x2="22" y2="70"/>
+          <line x1="90" y1="38" x2="98" y2="38"/><line x1="90" y1="54" x2="98" y2="54"/><line x1="90" y1="70" x2="98" y2="70"/>
+        </g>
+        <rect x="22" y="20" width="68" height="68" rx="10" fill="#FFFFFF"/>
+        <rect x="34" y="32" width="44" height="44" rx="5" fill="#E3F1FA" stroke-opacity=".6"/>
+      </g>
+      <text x="56" y="61.5" font-size="20" font-weight="800" fill="#00468B" text-anchor="middle">AI</text>
+
+      <!-- event tree: IE -> A -> B, three end states -->
+      <g fill="none" stroke="#2B6CA3" stroke-width="2" stroke-linecap="round">
+        <path d="M128,62 H164"/>
+        <path d="M164,40 V84"/>
+        <path d="M164,40 H214"/><path d="M214,24 V56"/>
+        <path d="M214,24 H294"/><path d="M214,56 H294"/>
+        <path d="M164,84 H294"/>
+      </g>
+      <g stroke="#FFFFFF" stroke-width="1.5">
+        <circle cx="298" cy="24" r="5" fill="#1FA5DB"/>
+        <circle cx="298" cy="56" r="5" fill="#E6AE47"/>
+        <circle cx="298" cy="84" r="5" fill="#E6AE47"/>
+      </g>
+
+      <!-- main control room: three displays on a console -->
+      <g stroke="#2B6CA3" stroke-width="2" stroke-linejoin="round">
+        <rect x="58" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <rect x="128" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <rect x="198" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <path d="M90,170 V180 M160,170 V180 M230,170 V180" fill="none"/>
+        <path d="M40,180 H280 L268,196 H52 Z" fill="#DCEBF6"/>
+      </g>
+      <g fill="none" stroke="#1FA5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="64,160 76,154 86,157 98,145 114,148"/>
+        <polyline points="204,158 216,150 228,154 240,140 256,144"/>
+      </g>
+      <g fill="#1FA5DB" fill-opacity=".55">
+        <rect x="138" y="152" width="8" height="12"/><rect x="150" y="144" width="8" height="20"/>
+        <rect x="162" y="148" width="8" height="16"/><rect x="174" y="138" width="8" height="26"/>
+      </g>
+      <path d="M56,96 C56,112 90,116 90,126" fill="none" stroke="#1FA5DB" stroke-width="1.5" stroke-dasharray="3 4" stroke-opacity=".7"/>
+    </svg>
+
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="lead">
+      <p class="lead-welcome">Welcome to the Nuclear AI for Risk &amp; Operations (NAIRO) Lab<br class="br-wide">
+      at GAST-Mechanical Engineering, Changwon National University.</p>
+      <p class="lead-welcome lead-ko" lang="ko">국립창원대학교 GAST-기계공학대학 원자력 AI 리스크·운전(NAIRO) 연구실 방문을 환영합니다.</p>
+      <hr class="lead-rule">
+      <p class="lead-main">We bring nuclear technology and AI together<br class="br-wide">
+      to make nuclear energy <b>safer</b> and <b>more economical</b>.</p>
+      <p class="lead-main-ko" lang="ko">NAIRO 연구실은 원자력 기술과 AI를 융합하여 보다 경제적이고 안전한 원자력에너지를 연구합니다.</p>
+    </div>
+
+    <!-- 연구 철학: 원자력 기술 ∩ AI → 보다 안전하고 경제적인 원자력에너지 -->
+    <figure class="phil" lang="en" aria-label="Nuclear technology and artificial intelligence, brought together, toward safer and more economical nuclear energy">
+      <svg class="phil-wide" viewBox="0 0 1000 380" aria-hidden="true">
+        <defs><clipPath id="ph-clip-w"><circle cx="280" cy="190" r="150"/></clipPath></defs>
+        <circle cx="480" cy="190" r="150" fill="#1FA5DB" fill-opacity=".09" clip-path="url(#ph-clip-w)"/>
+        <circle cx="280" cy="190" r="150" fill="none" stroke="#00468B" stroke-width="1.4"/>
+        <circle cx="480" cy="190" r="150" fill="none" stroke="#1FA5DB" stroke-width="1.4"/>
+        <text class="ph-l" x="205" y="182">Nuclear</text><text class="ph-l" x="205" y="208">Technology</text>
+        <text class="ph-k" x="205" y="236">원자력 기술</text>
+        <text class="ph-l" x="555" y="182">Artificial</text><text class="ph-l" x="555" y="208">Intelligence</text>
+        <text class="ph-k" x="555" y="236">인공지능</text>
+        <image href="assets/logo/nairo-wordmark.png" x="340" y="176" width="80" height="28"/>
+        <line x1="644" y1="190" x2="702" y2="190" stroke="#8FA3B3" stroke-width="1.2"/>
+        <path d="M697,185 L704,190 L697,195" fill="none" stroke="#8FA3B3" stroke-width="1.2"/>
+        <text class="ph-o" x="722" y="178">Safer</text>
+        <text class="ph-o" x="722" y="214">&amp; more economical</text>
+        <text class="ph-c" x="724" y="246">NUCLEAR ENERGY</text>
+        <text class="ph-k ph-start" x="724" y="272">더 안전하고 경제적인 원자력에너지</text>
       </svg>
-      <figcaption class="trend-cap">observed ─── · predicted ‑ ‑ ‑ · shaded: predictive uncertainty</figcaption>
+      <svg class="phil-narrow" viewBox="0 0 360 596" aria-hidden="true">
+        <defs><clipPath id="ph-clip-n"><circle cx="180" cy="140" r="110"/></clipPath></defs>
+        <circle cx="180" cy="280" r="110" fill="#1FA5DB" fill-opacity=".09" clip-path="url(#ph-clip-n)"/>
+        <circle cx="180" cy="140" r="110" fill="none" stroke="#00468B" stroke-width="1.4"/>
+        <circle cx="180" cy="280" r="110" fill="none" stroke="#1FA5DB" stroke-width="1.4"/>
+        <text class="ph-l" x="180" y="88">Nuclear</text><text class="ph-l" x="180" y="112">Technology</text>
+        <text class="ph-k" x="180" y="138">원자력 기술</text>
+        <image href="assets/logo/nairo-wordmark.png" x="118" y="189" width="124" height="43"/>
+        <text class="ph-l" x="180" y="296">Artificial</text><text class="ph-l" x="180" y="320">Intelligence</text>
+        <text class="ph-k" x="180" y="346">인공지능</text>
+        <line x1="180" y1="404" x2="180" y2="440" stroke="#8FA3B3" stroke-width="1.2"/>
+        <path d="M175,435 L180,442 L185,435" fill="none" stroke="#8FA3B3" stroke-width="1.2"/>
+        <text class="ph-o ph-mid" x="180" y="482">Safer</text>
+        <text class="ph-o ph-mid" x="180" y="516">&amp; more economical</text>
+        <text class="ph-c ph-mid" x="180" y="550">NUCLEAR ENERGY</text>
+        <text class="ph-k" x="180" y="574">더 안전하고 경제적인 원자력에너지</text>
+      </svg>
     </figure>
+
+    <aside class="recruit" aria-labelledby="recruit-title">
+      <p class="recruit-tag" id="recruit-title">Join us <span class="ko" lang="ko">구성원 모집</span></p>
+      <p class="recruit-en">NAIRO Lab is welcoming its first members — undergraduate researchers
+      interested in AI for nuclear power plant operation and risk assessment.</p>
+      <p class="recruit-ko" lang="ko">NAIRO 연구실의 첫 구성원을 모집합니다. 원자력발전소 운전과 리스크 평가를 위한 AI에 관심 있는
+      학부연구생의 연락을 기다립니다.</p>
+      <a class="btn primary" href="contact.html#join">Get in touch</a>
+    </aside>
   </div>
 </section>
 
-<section id="experience">
+<section id="news" class="news-band">
   <div class="wrap">
-    <div class="sec-head"><h2>Experience &amp; Education</h2><span class="count">KAERI · UNIST</span></div>
+    <div class="sec-head"><h2>News <span class="ko" lang="ko">소식</span></h2></div>
 
-    <p class="track-head">Professional Experience</p>
-    <div class="track">
-      <div class="role">
-        <span class="yr">Mar 2026 — Present</span>
-        <div>
-          <h3>Postdoctoral Researcher</h3>
-          <p class="where">Risk Assessment Research Division, Korea Atomic Energy Research Institute (KAERI)</p>
-          <p class="detail">Intelligent accident scenario prediction and response, under the V-SMR project. Advisor: Hyeonmin Kim, Ph.D.</p>
-        </div>
-      </div>
-      <div class="role">
-        <span class="yr">Mar 2025 — Mar 2026</span>
-        <div>
-          <h3>Postdoctoral Researcher</h3>
-          <p class="where">Nuclear Safety Assessment and Plant HMI Evolution Lab, UNIST</p>
-          <p class="detail">Cyber-attack detection with deep-learning models; AI-supported dynamic PSA. Advisor: Prof. Seung Jun Lee.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="track-head">Education</p>
-    <div class="track">
-      <div class="role">
-        <span class="yr">Feb 2025</span>
-        <div>
-          <h3>Ph.D. in Nuclear Engineering</h3>
-          <p class="where">Ulsan National Institute of Science and Technology (UNIST)</p>
-          <p class="detail">Dissertation: <cite>Deep Learning-based Optimized Simulation and Consequence Estimation with Neural
-          Network Uncertainty for Dynamic Risk Assessment of Nuclear Power Plants</cite>. Advisor: Prof. Seung Jun Lee.</p>
-        </div>
-      </div>
-      <div class="role">
-        <span class="yr">Feb 2019</span>
-        <div>
-          <h3>B.S. in Nuclear Science and Engineering</h3>
-          <p class="where">UNIST — minor in Electrical Engineering</p>
-          <p class="detail">Graduated cum laude.</p>
-        </div>
-      </div>
-    </div>
+    <!--
+      시간순(오래된 것 → 최신)으로 정리: 새 소식은 맨 아래에 한 줄씩 추가
+      <li><span class="news-date">[2026.11]</span><span>내용</span></li>
+    -->
+    <ul class="news-simple" lang="ko">
+      <li><span class="news-date">[2026.10]</span><span><i>Nuclear Engineering and Technology</i>에 제출한 <a href="https://doi.org/10.1016/j.net.2023.06.009">논문</a>이 한국원자력학회 우수논문상을 수상했습니다.</span></li>
+      <li><span class="news-date">[2026.10]</span><span>NAIRO 연구실이 국립창원대학교 GAST-기계공학대학에 문을 열었습니다.</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="research">
+</main>
+
+<footer class="site-foot">
   <div class="wrap">
-    <div class="sec-head"><h2>Research Interests</h2></div>
-    <div class="interests">
-      <div class="interest">
-        <h3>Agentic PSA</h3>
-        <p>Accelerating the labour-intensive parts of plant risk assessment with AI: simulation optimization, automatic event tree generation, and surrogate models for computationally heavy accident codes.</p>
-      </div>
-      <div class="interest">
-        <h3>Operator Support System</h3>
-        <p>As main control rooms go digital, AI opens a new route to operator support — especially for advanced reactors, where one crew may face multiple modules and remote siting.</p>
-      </div>
-      <div class="interest">
-        <h3>Trustworthy AI</h3>
-        <p>AI for safety-critical systems has to earn its trust: explainable AI, case-based reasoning, uncertainty quantification, and mechanistic interpretability.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <div class="wrap">
-    <div class="sec-head"><h2>Journal Publications</h2><span class="count">13 published · 1 under review</span></div>
-
-    <!-- 1 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/net-fdi.png" alt="Key figure: cluster-wise analysis of autoencoder reconstruction residuals"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/net-fdi.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Cluster-wise analysis of reconstruction residuals</div>
-      </div>
-      <div>
-        <p class="meta"><span class="tag review">UNDER REVIEW</span></p>
-        <h3>False Data Injection Detection in Nuclear Power Plants using Autoencoder with Latent-Conditioned Mahalanobis Scoring</h3>
-        <p class="authors"><b>Junyong Bae</b>, Ji Hyeon Shin, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 2 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/energies-latent.png" alt="Key figure: latent trajectory forecasting for long-horizon parameter prediction"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/energies-latent.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Generative AI for trend prediction</div>
-      </div>
-      <div>
-        <p class="meta">ENERGIES · VOL 19 · 2026<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.3390/en19133048">Latent Trajectory Forecasting for Long-Horizon Multivariate Nuclear Power Plant Parameter Prediction</a></h3>
-        <p class="authors">Donghee Jung, <b>Junyong Bae</b>, Hyun Gook Kang, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 3 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/pne-timeline.png" alt="Key figure: redundant timeline identification and reuse for massive scenario sets"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/pne-timeline.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Redundant timeline reuse</div>
-      </div>
-      <div>
-        <p class="meta">PROGRESS IN NUCLEAR ENERGY · VOL 198 · 2026<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.pnucene.2026.106451">Efficient Simulation of Massive Scenario Sets via Redundant Timeline Identification and Reuse</a></h3>
-        <p class="authors">Kyeong Seo Kim, <b>Junyong Bae</b>, Wooseok Jo, Dong-San Kim, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 4 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/asoc-twostage.png" alt="Key figure: two-stage deep learning model with epistemic uncertainty"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/asoc-twostage.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Two-stage trend prediction with UQ</div>
-      </div>
-      <div>
-        <p class="meta">APPLIED SOFT COMPUTING · VOL 186 · 2026<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.asoc.2025.114233">Two-Stage Deep Learning Model for Nuclear Power Plant Parameter Trend Prediction with Epistemic Uncertainty Quantification</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Kyeong Seo Kim, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 5 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/pne-xai.png" alt="Key figure: validating abnormal event diagnoses with explainable AI"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/pne-xai.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Diagnosis validation with XAI</div>
-      </div>
-      <div>
-        <p class="meta">PROGRESS IN NUCLEAR ENERGY · VOL 189 · 2025<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.pnucene.2025.105939">An Approach to Validating Abnormal Event Diagnoses with Explainable AI</a></h3>
-        <p class="authors">Ji Hyeon Shin, <b>Junyong Bae</b>, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 6 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/ress-dpsa.png" alt="Key figure: automatic accident sequence generation"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/ress-dpsa.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Automatic accident sequence generation</div>
-      </div>
-      <div>
-        <p class="meta">RELIABILITY ENGINEERING &amp; SYSTEM SAFETY · VOL 266 · 2025<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.ress.2025.111643">Automatic Accident Sequence Generation using Optimized Simulations for Dynamic Probabilistic Safety Assessment</a></h3>
-        <p class="authors">Wooseok Jo, <b>Junyong Bae</b>, Dong-San Kim, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 7 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/kjce-review.png" alt="Key figure: review of AI applications for NPP operation"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/kjce-review.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — AI for NPP operation: landscape</div>
-      </div>
-      <div>
-        <p class="meta">KOREAN JOURNAL OF CHEMICAL ENGINEERING · 2024<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1007/s11814-024-00246-7">Current Progress in the Application of Artificial Intelligence for Nuclear Power Plant Operation</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 8 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/net-rl.gif" alt="Key figure: deep reinforcement learning for multi-objective NPP operation"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/net-drl.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — DRL multi-objective operation</div>
-      </div>
-      <div>
-        <p class="meta">NUCLEAR ENGINEERING AND TECHNOLOGY · VOL 55 · 2023<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.net.2023.06.009">Deep Reinforcement Learning for a Multi-Objective Operation in a Nuclear Power Plant</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Jae Min Kim, Seung Jun Lee</p>
-        <p class="note">Best Paper Award, Nuclear Engineering and Technology, Korean Nuclear Society.</p>
-      </div>
-    </article>
-
-    <!-- 9 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/net-startup.png" alt="Key figure: coordinating startup actions with a parameter prediction model"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/net-startup.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Startup action coordination</div>
-      </div>
-      <div>
-        <p class="meta">NUCLEAR ENGINEERING AND TECHNOLOGY · VOL 55 · 2023<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.net.2022.11.012">Strategy to Coordinate Actions through a Plant Parameter Prediction Model during Startup Operation of a Nuclear Power Plant</a></h3>
-        <p class="authors">Jae Min Kim, <b>Junyong Bae</b>, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 10 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/asoc-icnn.png" alt="Key figure: interpretable CNN for abnormal events"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/asoc-icnn.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Interpretable CNN diagnosis</div>
-      </div>
-      <div>
-        <p class="meta">APPLIED SOFT COMPUTING · VOL 132 · 2023<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.asoc.2022.109792">An Interpretable Convolutional Neural Network for Nuclear Power Plant Abnormal Events</a></h3>
-        <p class="authors">Ji Hyeon Shin, <b>Junyong Bae</b>, Jae Min Kim, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 11 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/ned-validation.png" alt="Key figure: operation validation system preventing human errors"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/ned-validation.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Operation validation system</div>
-      </div>
-      <div>
-        <p class="meta">NUCLEAR ENGINEERING AND DESIGN · VOL 397 · 2022<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.nucengdes.2022.111949">Operation Validation System to Prevent Human Errors in Nuclear Power Plants</a></h3>
-        <p class="authors">Jeeyea Ahn, <b>Junyong Bae</b>, Byung Joo Min, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 12 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/asoc-limitsurface.gif" alt="Key figure: limit surface search with DNN and Monte Carlo dropout"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/asoc-limitsurface.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Limit surface search with MC dropout</div>
-      </div>
-      <div>
-        <p class="meta">APPLIED SOFT COMPUTING · VOL 124 · 2022<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.asoc.2022.109007">Limit Surface/States Searching Algorithm with a Deep Neural Network and Monte Carlo Dropout for Nuclear Power Plant Safety Assessment</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Jong Woo Park, Seung Jun Lee</p>
-      </div>
-    </article>
-
-    <!-- 13 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/eswa-trend.png" alt="Key figure: real-time parameter trend prediction after operator actions"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/eswa-trend.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — Real-time trend prediction</div>
-      </div>
-      <div>
-        <p class="meta">EXPERT SYSTEMS WITH APPLICATIONS · VOL 186 · 2021<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1016/j.eswa.2021.115848">Real-time Prediction of Nuclear Power Plant Parameter Trends Following Operator Actions</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Geunhee Kim, Seung Jun Lee</p>
-        <p class="note">31 citations — most-cited first-author work.</p>
-      </div>
-    </article>
-
-    <!-- 14 -->
-    <article class="pub">
-      <div class="figframe">
-        <img loading="lazy" decoding="async" src="figures/nt-mlp-lstm.png" alt="Key figure: MLP vs LSTM comparison for trend prediction"
-             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;figures/nt-mlp-lstm.png&lt;/div&gt;'">
-        <div class="figcap">Fig. — MLP vs LSTM comparison</div>
-      </div>
-      <div>
-        <p class="meta">NUCLEAR TECHNOLOGY · VOL 206 · 2020<span class="tag pub">PUBLISHED</span></p>
-        <h3><a href="https://doi.org/10.1080/00295450.2019.1693215">Comparison of Multi-layer Perceptron and Long Short-Term Memory for Plant Parameter Trend Prediction</a></h3>
-        <p class="authors"><b>Junyong Bae</b>, Jeeyea Ahn, Seung Jun Lee</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="conferences">
-  <div class="wrap">
-    <div class="sec-head"><h2>Conference Presentations</h2><span class="count">17 selected · 6 awarded</span></div>
-    <div class="list-two">
-      <div class="item"><span class="yr">2026</span>Feature Space Memory Banks for Example-Based Model Explanation in Safety-Critical Applications <span class="venue">— ESREL, Braga</span></div>
-      <div class="item"><span class="yr">2025</span>Example-based Explanation Framework for NPP Parameter Trend Prediction using Latent Space Similarity <span class="venue">— KNS Fall, Changwon</span></div>
-      <div class="item"><span class="yr">2025</span>Dynamic Risk Assessment Framework with Limit Surface Search and Success and Failure Domains Analysis <span class="venue">— ASRAM, Pattaya</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">GRAND PRIZE</a></div>
-      <div class="item"><span class="yr">2025</span>Epistemic Uncertainty in Deep Learning Models and Its Application for Model Performance Improvement <span class="venue">— ANS Annual, Chicago</span></div>
-      <div class="item"><span class="yr">2024</span>Parameters Trend Prediction using Two-Stage Deep Learning Models <span class="venue">— ISOFIC, Jeju</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">BEST STUDENT PAPER</a></div>
-      <div class="item"><span class="yr">2024</span>Epistemic Uncertainty in Deep Learning Models for Simulation Optimization and Consequence Prediction <span class="venue">— KNS Fall, Changwon</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">BEST PAPER</a></div>
-      <div class="item"><span class="yr">2024</span>Deep Autoencoding Gaussian Mixture Model for Detection of Manipulation Attacks <span class="venue">— PSAM17 &amp; ASRAM, Sendai</span></div>
-      <div class="item"><span class="yr">2023</span>Postprocessing of Multidimensional Limit Surfaces Searched by a Deep Learning-based Algorithm <span class="venue">— KNS Fall, Gyeongju</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">BEST PAPER</a></div>
-      <div class="item"><span class="yr">2023</span>NPP Emergency Response Planning with Tree Search and Deep Learning <span class="venue">— ESREL, Southampton</span></div>
-      <div class="item"><span class="yr">2022</span>Sensitivity Study of a Guided Simulation Algorithm with Deep Learning <span class="venue">— ASRAM, Daejeon</span></div>
-      <div class="item"><span class="yr">2022</span>Application of Deep Reinforcement Learning for Multi-objective and Continuous Control of Reactor Coolant <span class="venue">— KNS Fall, Changwon</span></div>
-      <div class="item"><span class="yr">2022</span>Deep Learning for Guided Simulation of Scenarios for Dynamic PRA <span class="venue">— PSAM 16, Honolulu</span></div>
-      <div class="item"><span class="yr">2021</span>Uncertainty-aware Limit Surface Search Algorithm using DNN <span class="venue">— ANS Winter, Washington DC</span></div>
-      <div class="item"><span class="yr">2021</span>Limit Surface Search Algorithm with ANN and Monte Carlo Dropout Uncertainty Quantification <span class="venue">— PSA 2021, Online</span></div>
-      <div class="item"><span class="yr">2021</span>Adaptive Sampling for Limit Surface Search using DNN and Monte Carlo Dropout <span class="venue">— KNS Fall, Changwon</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">PSA STUDENT PAPER</a></div>
-      <div class="item"><span class="yr">2019</span>NPP Parameter Prediction Strategy for Human Error Detection <span class="venue">— ANS Winter, Washington DC</span></div>
-      <div class="item"><span class="yr">2018</span>Operation Validation System through Time Series Forecasting by ANN <span class="venue">— KNS Student Conference, Yeosu</span><a class="awarded" href="#awards" title="See Honors &amp; Awards">BEST PAPER</a></div>
-    </div>
-  </div>
-</section>
-
-<section id="awards">
-  <div class="wrap">
-    <div class="sec-head"><h2>Honors &amp; Awards</h2><span class="count">2017 – 2026</span></div>
-    <div class="award"><span class="yr">2026</span><p>Best Paper Award, <cite>Nuclear Engineering and Technology</cite>, Korean Nuclear Society</p></div>
-    <div class="award"><span class="yr">2025</span><p>Grand Prize, Best Oral Presentation Awards, ASRAM 2025</p></div>
-    <div class="award"><span class="yr">2025</span><p>Outstanding Doctoral Dissertation Award, Department of Nuclear Engineering, UNIST</p></div>
-    <div class="award"><span class="yr">2025</span><p>Best Paper Award, 2024 KNS Fall Conference</p></div>
-    <div class="award"><span class="yr">2024</span><p>Best Student Paper Award, ISOFIC 2024</p></div>
-    <div class="award"><span class="yr">2024</span><p>Best Paper Award, 2023 KNS Fall Conference</p></div>
-    <div class="award"><span class="yr">2023</span><p>KNS Doosan Enerbility Scholarship</p></div>
-    <div class="award"><span class="yr">2022</span><p>KNS Park Chang-kyu PSA Student Paper Award</p></div>
-    <div class="award"><span class="yr">2021</span><p>Excellence Award, Nuclear–AI Convergence Case Study Presentation</p></div>
-    <div class="award"><span class="yr">2018</span><p>Best Paper Award, 2018 KNS Student Conference</p></div>
-    <div class="award"><span class="yr">2017–18</span><p>National Scholarship for Science and Engineering</p></div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Junyong Bae · Korea Atomic Energy Research Institute</span>
-    <span>Built as a static page · hosted on GitHub Pages</span>
+    <span>© 2026 NAIRO Lab · Nuclear AI for Risk &amp; Operations Lab</span>
+    <span><a href="contact.html">Contact</a> · <a href="mailto:junyong8090@changwon.ac.kr">junyong8090@changwon.ac.kr</a></span>
   </div>
 </footer>
 
