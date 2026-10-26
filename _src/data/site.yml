@@ -12,6 +12,8 @@ lab:
 affiliation:
   en: "GAST-Mechanical Engineering, Changwon National University"
   ko: "국립창원대학교 GAST-기계공학대학"
+  department: "GAST-Mechanical Engineering"
+  department_url: "https://www.changwon.ac.kr/gast_me/main.do"   # 학과 홈페이지 (배너·Contact에 링크)
   university: "Changwon National University"
   university_url: "https://www.changwon.ac.kr/"
 
@@ -26,20 +28,12 @@ address: "20 Changwondaehak-ro, Uichang-gu, Changwon-si, Gyeongsangnam-do 51140,
 
 copyright_year: 2026
 
-# 모집 안내 (Home 표지 상자 + Members 페이지). 모집을 멈추려면 show: false
+# 모집 안내. show: Members 페이지 안내 상자 / show_on_home: Home 표지의 Join us 상자
 recruiting:
   show: true
-  en: >-
-    NAIRO Lab is welcoming its first members — undergraduate researchers
-    interested in AI for nuclear power plant operation and risk assessment.
+  show_on_home: false
   ko: >-
-    NAIRO 연구실의 첫 구성원을 모집합니다. 원자력발전소 운전과 리스크 평가를 위한 AI에 관심 있는
-    학부연구생의 연락을 기다립니다.
-
-# Contact 페이지 '진학 희망 학생' 문구
-prospective:
-  en: "Interested in nuclear AI? Feel free to drop an email anytime."
-  ko: "원자력 AI에 관심 있는 학생이라면 언제든 편하게 이메일 주세요."
+    NAIRO 연구실의 시작을 함께할 학부연구생을 찾습니다.
 
 # 상단 메뉴. pages.yml에서 enabled: false 인 페이지는 메뉴에서 자동으로 빠집니다.
 nav:

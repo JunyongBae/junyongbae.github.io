@@ -24,7 +24,7 @@
             <p class="pos">{{ p.position }}</p>
             <h3>{{ p.name }}</h3>
 {% if p.topic %}
-            <p class="topic">{{ p.topic }}</p>
+            <p class="topic">{{ p.topic|safe }}</p>
 {% endif %}
 {% if p.email %}
             <a class="mail" href="mailto:{{ p.email }}">{{ p.email }}</a>
@@ -41,10 +41,14 @@
       <div class="sec-head"><h2>Students &amp; Researchers{{ m.ko('학생 및 연구원') }}</h2></div>
       <div class="empty">
         <h3>Join NAIRO Lab{{ m.ko('함께할 사람을 찾습니다') }}</h3>
-        <p>{{ site.recruiting.en }}</p>
-        <p class="ko-line" lang="ko">{{ site.recruiting.ko }}</p>
+{% if site.recruiting.en %}
+        <p>{{ site.recruiting.en|safe }}</p>
+        <p class="ko-line" lang="ko">{{ site.recruiting.ko|safe }}</p>
+{% else %}
+        <p lang="ko">{{ site.recruiting.ko|safe }}</p>
+{% endif %}
         <div class="btns">
-          <a class="btn primary" href="contact.html#join">Get in touch</a>
+          <a class="btn primary" href="contact.html">Get in touch</a>
           <a class="btn" href="research.html">Our research</a>
         </div>
       </div>

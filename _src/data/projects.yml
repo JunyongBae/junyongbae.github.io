@@ -1,10 +1,7 @@
-# Projects 페이지 (현재 pages.yml에서 꺼둔 상태).
-# 이 파일도 공개 저장소에 올라가므로, 공개해도 되는 과제만 적으세요.
-# 비공개 과제 기록은 사이트 폴더 밖 "personal homepage (비공개 보관)/projects-private.yml"에 있습니다.
-# 최신 과제를 맨 위에 적습니다.
-#
-# - period: "2027.03 – 2031.12"
-#   title: "과제명"
-#   note: "지원기관 (사업명)"
+# Projects 페이지. 최신 과제를 맨 위에 적습니다.
+# 이 파일은 공개 저장소에도 올라가니, 공개해도 되는 과제만 적으세요.
+# 페이지 자체를 숨기려면 pages.yml에서 projects.html 의 enabled: false
 
-[]
+- period: "2026.10 – 2026.12"
+  title: "사고진행 다변성 반영 사고 시나리오 모델링 기술 비교분석 및 추가 연구방향 도출"
+  note: "Collaborator: 한국원자력연구원"

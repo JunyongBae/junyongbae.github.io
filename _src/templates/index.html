@@ -12,9 +12,14 @@
   "url": {{ site.base_url|tojson }},
   "email": {{ ('mailto:' ~ site.email)|tojson }},
   "parentOrganization": {
-    "@type": "CollegeOrUniversity",
-    "name": {{ site.affiliation.university|tojson }},
-    "url": {{ site.affiliation.university_url|tojson }}
+    "@type": "EducationalOrganization",
+    "name": {{ site.affiliation.department|tojson }},
+    "url": {{ site.affiliation.department_url|tojson }},
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": {{ site.affiliation.university|tojson }},
+      "url": {{ site.affiliation.university_url|tojson }}
+    }
   },
   "founder": {
     "@type": "Person",
@@ -73,7 +78,7 @@
       <h1>Nuclear AI for Risk &amp; Operations <span class="abbr">({{ site.lab.acronym }})</span> Lab</h1>
       <hr class="banner-rule">
       <p class="banner-ko" lang="ko">{{ site.lab.name_ko }}</p>
-      <p class="banner-sub">{{ site.affiliation.en }}</p>
+      <p class="banner-sub"><a href="{{ site.affiliation.department_url }}">{{ site.affiliation.en }}</a></p>
     </div>
 
     <!-- right: AI chip · event tree · main control room console -->
@@ -174,13 +179,15 @@
         <text class="ph-k" x="180" y="574">더 안전하고 경제적인 원자력에너지</text>
       </svg>
     </figure>
-{% if site.recruiting.show %}
+{% if site.recruiting.show_on_home %}
 
     <aside class="recruit" aria-labelledby="recruit-title">
       <p class="recruit-tag" id="recruit-title">Join us{{ m.ko('구성원 모집') }}</p>
-      <p class="recruit-en">{{ site.recruiting.en }}</p>
-      <p class="recruit-ko" lang="ko">{{ site.recruiting.ko }}</p>
-      <a class="btn primary" href="contact.html#join">Get in touch</a>
+{% if site.recruiting.en %}
+      <p class="recruit-en">{{ site.recruiting.en|safe }}</p>
+{% endif %}
+      <p class="recruit-ko" lang="ko">{{ site.recruiting.ko|safe }}</p>
+      <a class="btn primary" href="contact.html">Get in touch</a>
     </aside>
 {% endif %}
   </div>

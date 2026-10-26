@@ -1,79 +1,77 @@
 # Research 페이지. intro와 각 분야 desc에는 <b> 같은 HTML을 쓸 수 있습니다.
-# 그림은 figures/thumbs/ 의 웹용 이미지를 씁니다.
+# 그림은 figures/thumbs/ 의 웹용 이미지를 씁니다. 한 분야에 여러 장이면 figures 목록에 위에서부터 순서대로 추가합니다.
+# link를 주면 그림을 눌렀을 때 그 파일(원본 등)이 열립니다.
 
 intro:
   en: >-
-    NAIRO — <b>N</b>uclear <b>AI</b> for <b>R</b>isk &amp; <b>O</b>perations — works on two sides of nuclear
-    power plant safety, how plants are <b>operated</b> and how their <b>risk</b> is assessed, and on the trustworthy AI
-    that both depend on.
-  ko: "NAIRO는 원자력발전소 안전의 두 축인 <b>운전</b>과 <b>리스크&nbsp;평가</b>, 그리고 이 둘을 뒷받침하는 신뢰할&nbsp;수&nbsp;있는&nbsp;AI를 연구합니다."   # &nbsp; = 줄바꿈 없이 붙여 쓰기
+    NAIRO (<b>N</b>uclear <b>AI</b> for <b>R</b>isk &amp; <b>O</b>perations) studies how AI can be applied to
+    nuclear power plant <b>operation</b> and <b>risk assessment</b> to make nuclear energy safer and more economical.
+    We also study trustworthy AI that supports both areas.
+  ko: "NAIRO는 보다 안전하고 경제적인 원자력발전을 위해 <b>운전</b>과 <b>리스크&nbsp;평가</b>를 두 축으로 원전 운영 전반에 AI 기술을 적용하는 방안을 연구합니다. 아울러 이를 뒷받침하는 신뢰할&nbsp;수&nbsp;있는&nbsp;AI도 함께 연구합니다."   # &nbsp; = 줄바꿈 없이 붙여 쓰기
 
 thrusts:
   - id: "operation"
     kicker: "O · Operations"
-    title: "Operator Support Systems"
-    title_ko: "운전원 지원 시스템"
-    summary: "Trend prediction · action validation · autonomous control"
-    tagline:
-      en: "Helping crews see where the plant is heading — and act on it."
-      ko: "발전소가 어디로 향하는지 보고, 그에 맞게 대응할 수 있도록 운전원을 돕습니다."
+    title: "Human–System Interaction for NPPs"
+    title_ko: "원전 인간-시스템 상호작용"
     desc:
       en: >-
-        As main control rooms go digital, AI opens a new route to operator support — especially for advanced
-        reactors, where one crew may face multiple modules and remote siting. We build models that predict how plant
-        parameters will evolve after an operator action, check actions before they are taken, diagnose abnormal events,
-        and learn control strategies for autonomous operation.
+        Operators play a key role in nuclear power plant operation, and the human–system interface (HSI) between
+        operators and the plant should support them in that role. This is especially important for advanced reactors,
+        where one crew may operate multiple modules or the plant may be operated remotely. We study how AI can provide
+        operators with processed, situation-appropriate information in digital main control rooms, supporting safer
+        and more economical operation.
       ko: >-
-        주제어실이 디지털화되면서 AI는 운전원 지원의 새로운 길을 열고 있습니다. 특히 한 운전조가 여러 모듈을
-        맡거나 원격 운전이 이루어질 수 있는 차세대 원자로에서 그 필요성이 큽니다. 저희는 운전원 조치 이후 발전소 변수가 어떻게
-        변할지 예측하고, 조치를 실행하기 전에 검증하며, 비정상 사건을 진단하고, 자율운전을 위한 제어 전략을 학습하는 모델을 개발합니다.
-    keywords: ["Parameter trend prediction", "Operation validation", "Abnormal event diagnosis", "Deep reinforcement learning", "Advanced reactors"]
-    figure: "figures/thumbs/net-rl.webp"
-    alt: "Animation of a deep reinforcement learning agent operating a nuclear power plant toward multiple objectives"
-    caption: "Deep reinforcement learning for multi-objective plant operation"
+        운전원은 원자력발전소 운전에서 핵심적인 역할을 담당합니다. 기계 시스템인 원자력발전소와 운전원을 잇는
+        HSI(Human–System Interaction)는 운전원이 그 역할을 해낼 수 있도록 뒷받침해야 합니다. 특히 한 운전조가 여러 모듈을 맡거나
+        원격 운전이 이루어질 수 있는 차세대 원자로에서는 이러한 지원 시스템의 중요성이 더욱 큽니다. 우리는 디지털화된 주제어실에서
+        AI로 가공한 정보를 상황에 맞게 제공하여, 보다 안전하고 경제적인 운전을 돕고자 합니다.
+    keywords: ["Emergency operation support", "Event diagnosis", "Signal validation", "Cybersecurity", "Digital twins", "Autonomous operation with deep RL"]
+    figures:
+      - src: "figures/thumbs/hsi-tamper-display.webp"
+        alt: "Control-room display of a process-variable tampering detection system, listing suspected signals by reconstruction-error contribution with their trend plots"
+      - src: "figures/thumbs/hsi-ai-control-room.webp"
+        alt: "Illustration of an operator at a digital control-room console working alongside an AI assistant"
 
   - id: "risk"
     kicker: "R · Risk"
-    title: "Agentic & Dynamic PSA"
-    title_ko: "에이전틱·동적 PSA"
-    summary: "Simulation optimization · limit surfaces · automatic event trees"
-    tagline:
-      en: "Making plant risk assessment faster without making it less thorough."
-      ko: "철저함은 그대로, 발전소 리스크 평가는 더 빠르게."
+    title: "Safety Assessment"
+    title_ko: "원자력시스템 안전성평가"
     desc:
       en: >-
-        Probabilistic safety assessment still depends on labour-intensive analysis and computationally heavy
-        accident codes. We use AI to accelerate it: choosing which scenarios are worth simulating, searching the limit
-        surface between success and failure, generating accident sequences and event trees automatically, and replacing
-        expensive codes with surrogate models.
+        Safety assessment of a nuclear power plant examines what accidents could occur and how the plant would respond.
+        This requires simulating a large number of accident scenarios and quantifying their probabilities, which involves
+        heavy computation and considerable manual work. We study methods that use AI to make this process faster and simpler.
+        Through this, we aim to establish a technical basis for safety‑by‑design of advanced reactors and for licensing
+        based on risk information and safety performance (TI-RIPB).
       ko: >-
-        확률론적 안전성평가(PSA)는 여전히 많은 수작업 분석과 계산 부담이 큰 사고 해석 코드에 의존합니다.
-        저희는 AI로 이 과정을 가속합니다. 시뮬레이션할 가치가 있는 시나리오를 선별하고, 성공과 실패를 가르는 한계면을 탐색하며,
-        사고 경위와 사건수목을 자동으로 생성하고, 계산이 무거운 코드를 대리 모델로 대체합니다.
+        원전의 안전성은 "어떤 사고가 일어날 수 있고, 그때 발전소는 어떻게 되는가"를 묻는 데서 평가됩니다. 이 질문에 답하려면
+        수많은 사고 시나리오를 시뮬레이션하고 그 확률을 정량화해야 하며, 여기에는 많은 계산과 적지 않은 수작업이 뒤따릅니다.
+        우리는 AI로 이 과정을 더 빠르고 간편하게 만드는 방법을 연구합니다. 이를 통해 차세대 원전을 설계 초기부터
+        안전하게 다듬는 Safety‑by‑design과, 리스크 정보와 안전 성능을 중심으로 심사하는 차세대 인허가(TI-RIPB)의 기술적 기반을 마련하고자 합니다.
     keywords: ["Dynamic PSA", "Simulation optimization", "Limit surface search", "Automatic event tree generation", "Surrogate models"]
-    figure: "figures/thumbs/asoc-limitsurface.webp"
-    alt: "Animation of a deep neural network with Monte Carlo dropout searching the limit surface between success and failure"
-    caption: "Limit surface search with DNN and Monte Carlo dropout"
+    figures:
+      - src: "figures/thumbs/asoc-limitsurface.webp"
+        alt: "Animation of a deep neural network with Monte Carlo dropout searching the limit surface between success and failure"
+      - src: "figures/thumbs/dpsa-event-tree.webp"
+        alt: "Automatically generated event tree for an SGTR scenario: 36,442 simulations split into 11 sequences, each with its share of cases and output trend"
+        link: "figures/dpsa-event-tree.png"     # 누르면 원본이 크게 열림
 
   - id: "trust"
     kicker: "AI · Foundation"
-    title: "Trustworthy AI"
-    title_ko: "신뢰할 수 있는 AI"
-    summary: "Uncertainty quantification · explainability · data integrity"
-    foundation: true          # 상단 카드를 하늘색(기반)으로 표시
-    tagline:
-      en: "AI for safety-critical systems has to earn its trust."
-      ko: "안전이 중요한 시스템의 AI는 스스로 신뢰를 증명해야 합니다."
+    title: "AI for safety-critical systems"
+    title_ko: "안전 필수 시스템을 위한 AI"
     desc:
       en: >-
-        Underneath both directions, we make models state what they do not know and show why they decide what
-        they decide: uncertainty quantification, explainable AI, case-based reasoning, and mechanistic interpretability —
-        along with detecting manipulated plant data before a model acts on it.
+        AI for safety-critical systems such as nuclear power plants can be used in practice only if people can understand
+        and verify its decisions. We study methods that show how confident a model is in its predictions and what its
+        decisions are based on, building a foundation for trustworthy AI in safety-critical systems.
       ko: >-
-        운전과 리스크 평가 모두의 바탕에서, 저희는 모델이 무엇을 모르는지 스스로 밝히고 왜 그렇게 판단했는지
-        보여주도록 만듭니다. 불확실성 정량화, 설명 가능한 AI, 사례 기반 추론, 기계론적 해석 가능성을 연구하며, 모델이 판단하기 전에
-        조작된 발전소 데이터를 탐지하는 기술도 함께 다룹니다.
-    keywords: ["Uncertainty quantification", "Explainable AI", "Case-based reasoning", "Mechanistic interpretability", "Cyber-attack detection"]
-    figure: "figures/thumbs/asoc-twostage.webp"
-    alt: "Map of a deep learning model's output across two accident timing variables"
-    caption: "Two-stage trend prediction with UQ"
+        원자력발전소와 같은 안전 필수 시스템(safety-critical system)을 위한 AI 기술은 사람이 그 판단을 이해하고
+        검증할 수 있어야 실제 현장에 쓰일 수 있습니다. 우리는 모델이 자신의 예측을 얼마나 확신하는지, 어떤 근거로 판단했는지를
+        드러내는 기술을 연구하여, 안전 필수 시스템을 위한 신뢰할 수 있는 AI의 기반을 마련하고자 합니다.
+    keywords: ["Uncertainty quantification", "Explainable AI", "Case-based reasoning", "Mechanistic interpretability", "Human-in-the-loop design"]
+    figures:
+      - src: "figures/thumbs/xai-example-based.webp"
+        alt: "Example-based explanation: a surrogate model's hidden-layer activation is used to find the most similar training scenarios, whose trends explain the prediction"
+        link: "figures/xai-example-based.png"     # 누르면 원본이 크게 열림

@@ -70,8 +70,10 @@
     </div>
     <div>
       <h2>{{ professor.name }}{{ m.ko(professor.name_ko) }}</h2>
-      <p class="position">{{ professor.position.en }}</p>
-      <p class="position ko-line" lang="ko">{{ professor.position.ko }}</p>
+      <p class="position">{{ professor.position.en|safe }}</p>
+{% if professor.position.ko %}
+      <p class="position ko-line" lang="ko">{{ professor.position.ko|safe }}</p>
+{% endif %}
       <p class="bio">{{ professor.bio|safe }}</p>
       <div class="btns">
         <a class="btn primary" href="mailto:{{ site.email }}">Email</a>

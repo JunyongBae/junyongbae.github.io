@@ -16,20 +16,12 @@
         <dt>Office<span class="ko" lang="ko">교수실</span></dt>
         <dd>{{ site.office.en }}{{ m.ko(site.office.ko) }}</dd>
         <dt>Address<span class="ko" lang="ko">주소</span></dt>
-        <dd>{{ site.affiliation.en }}<br>{{ site.address }}</dd>
+        <dd><a href="{{ site.affiliation.department_url }}">{{ site.affiliation.en }}</a><br>{{ site.address }}</dd>
       </dl>
       <div class="btns">
         <a class="btn primary" href="mailto:{{ site.email }}">Send an email</a>
+        <a class="btn" href="{{ site.affiliation.department_url }}">Department website</a>
         <a class="btn" href="{{ site.scholar }}">Google Scholar</a>
-      </div>
-    </div>
-
-    <div class="card" id="join">
-      <h2>Prospective students{{ m.ko('진학 희망 학생') }}</h2>
-      <p>{{ site.prospective.en }}</p>
-      <p class="ko-line" lang="ko">{{ site.prospective.ko }}</p>
-      <div class="btns">
-        <a class="btn primary" href="mailto:{{ site.email }}">Send an email</a>
       </div>
     </div>
 

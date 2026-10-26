@@ -35,7 +35,6 @@ ul,ol{list-style:none}
 .ko{margin-left:.5em;font-size:.62em;font-weight:500;letter-spacing:0;color:var(--ink-soft);white-space:nowrap}
 h1 .ko{font-size:.5em}
 dt .ko,.track-head .ko{margin-left:.45em;font-size:1em;font-weight:400;text-transform:none;letter-spacing:0}
-.pillar .ko{display:block;margin:2px 0 0;font-size:.82em;font-weight:500}
 dt .ko{display:block;margin:2px 0 0}
 .ko-line{margin-top:4px;color:var(--ink-soft)}
 .bio.ko-line,.position.ko-line{margin-top:6px}
@@ -99,8 +98,8 @@ section{padding:56px 0;scroll-margin-top:calc(var(--topbar-h) + 16px)}
 /* sub-page header */
 .page-head{padding:56px 0 40px;border-bottom:1px solid var(--line)}
 .page-head h1{margin-top:8px;font-weight:800;font-size:clamp(2rem,4.5vw,2.6rem);line-height:1.1;letter-spacing:-.02em}
-.page-head .intro{margin-top:14px;color:var(--ink-soft);max-width:64ch}
-.page-head .intro.ko-line{max-width:none}   /* Korean runs wider per character; let it use the full width */
+/* English and Korean intro share one width so both paragraphs end on the same right edge */
+.page-head .intro{margin-top:14px;color:var(--ink-soft);max-width:820px}
 
 /* ---------- home ---------- */
 /* banner: plant illustration (left) · lab name (centre) · AI / event tree / control room (right) */
@@ -114,6 +113,8 @@ section{padding:56px 0;scroll-margin-top:calc(var(--topbar-h) + 16px)}
 .banner-rule{width:72%;height:1px;margin:20px auto 16px;border:0;background:#9CC3DF}
 .banner-ko{font-size:clamp(1rem,1.9vw,1.2rem);font-weight:600;color:var(--ink)}
 .banner-sub{margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+.banner-sub a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+.banner-sub a:hover{color:var(--cherenkov-deep);border-bottom-color:currentColor}
 
 /* home lead: welcome line, a short rule, then the one-sentence statement — centred, English first with Korean below */
 .lead{max-width:780px;margin:0 auto;text-align:center}
@@ -185,20 +186,15 @@ a.member:hover{border-color:var(--cherenkov)}
 .member .topic{margin-top:6px;font-size:.86rem;color:var(--ink-soft)}
 .member .mail{display:inline-block;margin-top:6px;font-size:.82rem}
 
-/* ---------- projects ---------- */
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}
-.pillar{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px;
-  color:var(--ink);text-decoration:none}
-.pillar:hover{border-color:var(--cherenkov)}
-.pillar.base{background:var(--cherenkov-wash);border-color:#B9DAEE}
-.pillar .k{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--cherenkov-deep)}
-.pillar b{display:block;margin-top:2px;font-size:1.1rem}
-.pillar small{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
+/* ---------- research ---------- */
 .thrust{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;padding:48px 0;border-top:1px solid var(--line);
   align-items:start;scroll-margin-top:calc(var(--topbar-h) + 8px)}
 .thrust:first-child{border-top:0;padding-top:0}
 .thrust .figframe img{aspect-ratio:auto}
 .thrust h2{margin-top:6px;font-size:1.6rem;font-weight:800;letter-spacing:-.01em;line-height:1.25}
+.thrust h2 .ko{display:block;margin:4px 0 0}   /* Korean label sits on its own line under the area title */
+.thrust-figs{display:grid;gap:14px;align-self:start}   /* one or more figures stacked in the right column */
+.thrust-figs a{display:block}
 .thrust .tagline{margin-top:2px;color:var(--ink-soft)}
 .thrust .desc{margin-top:16px}
 .keywords{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
@@ -255,7 +251,7 @@ a.member:hover{border-color:var(--cherenkov)}
 .item .awarded:hover{background:var(--amber);color:var(--panel)}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.contact-grid{display:grid;grid-template-columns:minmax(0,680px);gap:20px;align-items:start}   /* one contact card */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:26px 28px}
 .card h2{font-size:1.15rem;font-weight:700;margin-bottom:16px}
 .card .btns{margin-top:20px}
@@ -301,7 +297,6 @@ dl.info dt{padding-top:3px;font-size:11px;font-weight:600;letter-spacing:.12em;t
   .banner{padding:36px 0}
   .banner-grid{grid-template-columns:1fr;gap:0}
   .banner-art{display:none}   /* text only on narrow screens */
-  .pillars{grid-template-columns:1fr}
   .profile{grid-template-columns:1fr;gap:24px}
   .portrait{max-width:200px}
   .thrust{grid-template-columns:1fr;gap:24px}
@@ -317,8 +312,6 @@ dl.info dt{padding-top:3px;font-size:11px;font-weight:600;letter-spacing:.12em;t
   .wrap{padding:0 18px}
   .page-head{padding:40px 0 30px}
   section{padding:44px 0}
-  /* Korean label drops under the heading instead of wrapping with an indent */
-  .thrust h2 .ko{display:block;margin:4px 0 0}
   .lead-welcome .br-wide,.lead-main .br-wide{display:none}
   .proj{grid-template-columns:1fr;gap:4px}
   /* member cards: photo on top, text below, two per row */

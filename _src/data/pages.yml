@@ -39,7 +39,7 @@
 
 - file: "projects.html"
   template: "projects.html"
-  enabled: false            # 2026-10: 계약 과제 비공개를 위해 내림. 공개 과제가 생기면 true
+  enabled: true
   title: "Projects — NAIRO Lab"
   description: "Research projects of NAIRO Lab (Nuclear AI for Risk & Operations), Changwon National University."
   og_title: "Projects — NAIRO Lab"

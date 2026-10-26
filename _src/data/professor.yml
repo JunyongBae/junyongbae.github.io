@@ -5,11 +5,12 @@ name_ko: "배준용"
 initials: "JB"
 photo: "figures/professor.jpg"     # 3:4 세로 사진
 position:
-  en: "Principal Investigator, NAIRO Lab · Assistant Professor, GAST-Mechanical Engineering, Changwon National University"
-  ko: "국립창원대학교 GAST-기계공학대학 조교수"
+  en: "Assistant Professor <br> GAST-Mechanical Engineering, Changwon National University"
 bio: >-
   Dr. Bae received a Ph.D. in Nuclear Engineering from UNIST in 2025, worked as a postdoctoral researcher
   at UNIST and at the Korea Atomic Energy Research Institute (KAERI), and joined Changwon National University in October 2026.
+  <br><br> His research interests include risk assessment, digital twins, and operator support systems for safer and more economical
+  operation of nuclear power plants.
 cv: "CV_junyong.pdf"
 experience_note: "CWNU · KAERI · UNIST"
 
@@ -17,7 +18,6 @@ experience:
   - period: "Oct 2026 — Present"
     title: "Assistant Professor"
     where: "GAST-Mechanical Engineering, Changwon National University (CWNU)"
-    detail: "Principal Investigator, NAIRO Lab"
   - period: "Mar 2026 — Sep 2026"
     title: "Postdoctoral Researcher"
     where: "Risk Assessment Research Division, Korea Atomic Energy Research Institute (KAERI)"
