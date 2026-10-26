@@ -1,0 +1,13 @@
+# Home(표지) 문구. HTML 태그(<b>, <br class="br-wide"> 등)를 그대로 쓸 수 있습니다.
+
+welcome:
+  en: >-
+    Welcome to the Nuclear AI for Risk &amp; Operations (NAIRO) Lab<br class="br-wide">
+    at GAST-Mechanical Engineering, Changwon National University.
+  ko: "국립창원대학교 GAST-기계공학대학 원자력 AI 리스크·운전(NAIRO) 연구실 방문을 환영합니다."
+
+statement:
+  en: >-
+    We bring nuclear technology and AI together<br class="br-wide">
+    to make nuclear energy <b>safer</b> and <b>more economical</b>.
+  ko: "NAIRO 연구실은 원자력 기술과 AI를 융합하여 보다 경제적이고 안전한 원자력에너지를 연구합니다."

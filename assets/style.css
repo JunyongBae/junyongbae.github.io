@@ -20,6 +20,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+/* Korean wraps between words, never inside one; paragraphs avoid a lone short last line */
+:lang(ko){word-break:keep-all;overflow-wrap:break-word}
+p{text-wrap:pretty}
 a{color:var(--cherenkov-deep)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--cherenkov);outline-offset:2px}
 img{max-width:100%}
@@ -97,6 +100,7 @@ section{padding:56px 0;scroll-margin-top:calc(var(--topbar-h) + 16px)}
 .page-head{padding:56px 0 40px;border-bottom:1px solid var(--line)}
 .page-head h1{margin-top:8px;font-weight:800;font-size:clamp(2rem,4.5vw,2.6rem);line-height:1.1;letter-spacing:-.02em}
 .page-head .intro{margin-top:14px;color:var(--ink-soft);max-width:64ch}
+.page-head .intro.ko-line{max-width:none}   /* Korean runs wider per character; let it use the full width */
 
 /* ---------- home ---------- */
 /* banner: plant illustration (left) · lab name (centre) · AI / event tree / control room (right) */
@@ -223,9 +227,6 @@ a.member:hover{border-color:var(--cherenkov)}
 .group-head{display:flex;align-items:baseline;gap:10px;margin-bottom:18px;font-size:1.2rem;font-weight:700}
 .group-head .count{font-size:12px;font-weight:400;color:var(--ink-soft)}
 .group-head:not(:first-of-type){margin-top:60px}
-.year-head{display:flex;align-items:center;gap:14px;margin:44px 0 4px;font-size:1.1rem;font-weight:800;color:var(--cherenkov-deep)}
-.year-head:first-of-type{margin-top:0}
-.year-head::after{content:"";flex:1;height:1px;background:var(--line)}
 .pub{display:grid;grid-template-columns:260px 1fr;gap:26px;padding:24px 0;border-bottom:1px solid var(--line-soft);
   scroll-margin-top:calc(var(--topbar-h) + 16px)}
 .pub:target{background:linear-gradient(90deg,var(--cherenkov-wash),transparent 70%)}

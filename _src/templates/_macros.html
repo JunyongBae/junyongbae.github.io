@@ -1,0 +1,55 @@
+{# Small reusable pieces shared by the page templates. #}
+
+{# Korean label shown after an English heading #}
+{% macro ko(text) -%}
+{% if text %} <span class="ko" lang="ko">{{ text }}</span>{% endif %}
+{%- endmacro %}
+
+{# Sub-page header: optional eyebrow, English title + Korean label; anything inside {% call %} goes below the title #}
+{% macro page_head(title, title_ko=None, eyebrow=None) -%}
+<div class="page-head">
+  <div class="wrap">
+{% if eyebrow %}
+    <p class="eyebrow">{{ eyebrow }}</p>
+{% endif %}
+    <h1>{{ title }}{{ ko(title_ko) }}</h1>
+{% if caller is defined %}
+{{ caller() }}
+{%- endif %}
+  </div>
+</div>
+{%- endmacro %}
+
+{# Figure image with a striped placeholder if the file is missing.
+   lazy=True → loads as it scrolls into view; deferred=True → no src until a fold opens (see site.js) #}
+{% macro fig_img(src, alt, lazy=True, deferred=False) -%}
+<img {% if lazy and not deferred %}loading="lazy" {% endif %}decoding="async" {{ 'data-src' if deferred else 'src' }}="{{ src }}" alt="{{ alt }}"
+             onerror="this.outerHTML='&lt;div class=&quot;fig-missing&quot;&gt;{{ src }}&lt;/div&gt;'">
+{%- endmacro %}
+
+{# One journal article (Publications page) #}
+{% macro journal(p, deferred=False) -%}
+    <article class="pub" id="{{ p.id }}">
+      <div class="figframe">
+        {{ fig_img(p.figure, p.alt, deferred=deferred) }}
+      </div>
+      <div>
+{% if p.status == 'review' %}
+        <p class="meta"><span class="tag review">UNDER REVIEW</span></p>
+{% else %}
+        <p class="meta">{{ p.meta }}<span class="tag published">PUBLISHED</span></p>
+{% endif %}
+        <h3><span class="pub-no">[J{{ p.no }}]</span> {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+        <p class="authors">{{ p.authors|pi }}</p>
+{% if p.note %}
+        <p class="note">{{ p.note }}</p>
+{% endif %}
+      </div>
+    </article>
+{%- endmacro %}
+
+{# One conference presentation (Publications page) #}
+{% macro conference(c) -%}
+      <div class="item"><span class="yr">{{ c.year }}</span><span class="pub-no">[C{{ c.no }}]</span> {{ c.title }} <span class="venue">— {{ c.venue }}</span>
+{%- if c.award %}<a class="awarded" href="professor.html#awards" title="See Honors &amp; Awards">{{ c.award }}</a>{% endif %}</div>
+{%- endmacro %}

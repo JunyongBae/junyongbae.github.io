@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+
+{{ m.page_head('Publications', '논문') }}
+
+{% set cur = publications.current %}
+<section id="cwnu">
+  <div class="wrap">
+    <div class="sec-head"><h2>{{ cur.title }}</h2><span class="count">{{ cur.count_label }}</span></div>
+
+{% for p in cur.journals %}
+{{ m.journal(p) }}
+
+{% endfor %}
+{% if cur.conferences %}
+    <h3 class="group-head">Conference Presentations{{ m.ko('학술대회 발표') }}</h3>
+    <div class="list-two">
+{% for c in cur.conferences %}
+{{ m.conference(c) }}
+{% endfor %}
+    </div>
+{% endif %}
+  </div>
+</section>
+
+{% set old = publications.before %}
+<section id="before-cwnu" class="before">
+  <div class="wrap">
+    <details class="fold" id="before-fold">
+      <summary class="sec-head fold-head"><h2>{{ old.title }}{{ m.ko(old.title_ko) }}</h2><span class="count">{{ old.count_label }}</span><span class="fold-btn" aria-hidden="true"></span></summary>
+
+    <h3 class="group-head" id="journal">Journal Articles{{ m.ko('학술지 논문') }}</h3>
+{% for p in old.journals %}
+
+{{ m.journal(p, deferred=True) }}
+{% endfor %}
+
+    <h3 class="group-head" id="conferences">Conference Presentations{{ m.ko('학술대회 발표') }} <span class="count">{{ old.conf_label }}</span></h3>
+    <div class="list-two">
+{% for c in old.conferences %}
+{{ m.conference(c) }}
+{% endfor %}
+    </div>
+    </details>
+  </div>
+</section>
+
+{% endblock %}

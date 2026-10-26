@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+
+{{ m.page_head('Projects', '연구과제') }}
+
+<section id="funded">
+  <div class="wrap">
+    <div class="sec-head"><h2>Funded Projects{{ m.ko('수행 과제') }}</h2></div>
+    <ul lang="ko">
+{% for p in projects %}
+      <li class="proj">
+        <span class="yr">{{ p.period }}</span>
+        <div>
+          <h3>{{ p.title }}</h3>
+{% if p.note %}
+          <p>{{ p.note }}</p>
+{% endif %}
+        </div>
+      </li>
+{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

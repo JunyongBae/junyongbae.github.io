@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+
+{{ m.page_head('Contact', '연락처') }}
+
+<section>
+  <div class="wrap contact-grid">
+
+    <div class="card">
+      <h2>Get in touch{{ m.ko('문의') }}</h2>
+      <dl class="info">
+        <dt>Email<span class="ko" lang="ko">이메일</span></dt>
+        <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+        <dt>Office<span class="ko" lang="ko">교수실</span></dt>
+        <dd>{{ site.office.en }}{{ m.ko(site.office.ko) }}</dd>
+        <dt>Address<span class="ko" lang="ko">주소</span></dt>
+        <dd>{{ site.affiliation.en }}<br>{{ site.address }}</dd>
+      </dl>
+      <div class="btns">
+        <a class="btn primary" href="mailto:{{ site.email }}">Send an email</a>
+        <a class="btn" href="{{ site.scholar }}">Google Scholar</a>
+      </div>
+    </div>
+
+    <div class="card" id="join">
+      <h2>Prospective students{{ m.ko('진학 희망 학생') }}</h2>
+      <p>{{ site.prospective.en }}</p>
+      <p class="ko-line" lang="ko">{{ site.prospective.ko }}</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:{{ site.email }}">Send an email</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

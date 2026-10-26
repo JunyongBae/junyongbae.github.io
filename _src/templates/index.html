@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block jsonld %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": {{ site.lab.name|tojson }},
+  "alternateName": {{ site.lab.short|tojson }},
+  "url": {{ site.base_url|tojson }},
+  "email": {{ ('mailto:' ~ site.email)|tojson }},
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": {{ site.affiliation.university|tojson }},
+    "url": {{ site.affiliation.university_url|tojson }}
+  },
+  "founder": {
+    "@type": "Person",
+    "name": {{ site.pi|tojson }},
+    "url": {{ (site.base_url ~ 'professor.html')|tojson }}
+  },
+  "knowsAbout": [
+    "Nuclear engineering",
+    "Probabilistic safety assessment",
+    "Dynamic PSA",
+    "Nuclear power plant operator support systems",
+    "Deep learning",
+    "Uncertainty quantification",
+    "Explainable AI"
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="banner">
+  <div class="banner-grid">
+
+    <!-- left: large PWR containment dome + i-SMR building (cutaway, four modules in the pool) -->
+    <svg class="banner-art" viewBox="0 0 320 204" role="img" aria-label="Illustration: PWR containment dome and an i-SMR building">
+      <g stroke="#1FA5DB" stroke-opacity=".28" stroke-width="1" fill="#1FA5DB" fill-opacity=".35">
+        <line x1="14" y1="30" x2="58" y2="14"/><line x1="58" y1="14" x2="104" y2="34"/><line x1="14" y1="30" x2="40" y2="56"/>
+        <line x1="104" y1="34" x2="150" y2="22"/><line x1="150" y1="22" x2="196" y2="46"/><line x1="40" y1="56" x2="104" y2="34"/>
+        <circle cx="14" cy="30" r="2.5"/><circle cx="58" cy="14" r="2.5"/><circle cx="104" cy="34" r="2.5"/>
+        <circle cx="40" cy="56" r="2.5"/><circle cx="150" cy="22" r="2.5"/><circle cx="196" cy="46" r="2.5"/>
+      </g>
+      <g stroke="#2B6CA3" stroke-width="2" stroke-linejoin="round">
+        <!-- containment: cylinder + hemispherical dome -->
+        <path d="M24,196 V112 A50,50 0 0 1 124,112 V196 Z" fill="#EAF4FB"/>
+        <path d="M24,112 H124" fill="none" stroke-opacity=".5"/>
+        <path d="M44,104 A32,32 0 0 1 70,72" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+        <!-- auxiliary building -->
+        <rect x="124" y="148" width="46" height="48" fill="#FFFFFF"/>
+        <g fill="#DCEBF6" stroke="none">
+          <rect x="132" y="158" width="10" height="8"/><rect x="152" y="158" width="10" height="8"/>
+          <rect x="132" y="174" width="10" height="8"/><rect x="152" y="174" width="10" height="8"/>
+        </g>
+        <!-- i-SMR building, cut open to show the modules standing in the pool -->
+        <path d="M180,196 V122 L243,108 L306,122 V196 Z" fill="#FFFFFF"/>
+        <rect x="188" y="150" width="110" height="42" fill="#1FA5DB" fill-opacity=".14" stroke="none"/>
+        <g fill="#DCEBF6" stroke="#1878B4">
+          <rect x="194" y="132" width="16" height="56" rx="8"/><rect x="218" y="132" width="16" height="56" rx="8"/>
+          <rect x="252" y="132" width="16" height="56" rx="8"/><rect x="276" y="132" width="16" height="56" rx="8"/>
+        </g>
+      </g>
+      <line x1="6" y1="196" x2="314" y2="196" stroke="#2B6CA3" stroke-width="2"/>
+    </svg>
+
+    <div class="banner-text">
+      <h1>Nuclear AI for Risk &amp; Operations <span class="abbr">({{ site.lab.acronym }})</span> Lab</h1>
+      <hr class="banner-rule">
+      <p class="banner-ko" lang="ko">{{ site.lab.name_ko }}</p>
+      <p class="banner-sub">{{ site.affiliation.en }}</p>
+    </div>
+
+    <!-- right: AI chip · event tree · main control room console -->
+    <svg class="banner-art" viewBox="0 0 320 204" role="img" aria-label="Illustration: AI chip, event tree and main control room">
+      <!-- AI chip -->
+      <g stroke="#2B6CA3" stroke-width="2">
+        <g stroke-linecap="round">
+          <line x1="40" y1="12" x2="40" y2="20"/><line x1="56" y1="12" x2="56" y2="20"/><line x1="72" y1="12" x2="72" y2="20"/>
+          <line x1="40" y1="88" x2="40" y2="96"/><line x1="56" y1="88" x2="56" y2="96"/><line x1="72" y1="88" x2="72" y2="96"/>
+          <line x1="14" y1="38" x2="22" y2="38"/><line x1="14" y1="54" x2="22" y2="54"/><line x1="14" y1="70" x2="22" y2="70"/>
+          <line x1="90" y1="38" x2="98" y2="38"/><line x1="90" y1="54" x2="98" y2="54"/><line x1="90" y1="70" x2="98" y2="70"/>
+        </g>
+        <rect x="22" y="20" width="68" height="68" rx="10" fill="#FFFFFF"/>
+        <rect x="34" y="32" width="44" height="44" rx="5" fill="#E3F1FA" stroke-opacity=".6"/>
+      </g>
+      <text x="56" y="61.5" font-size="20" font-weight="800" fill="#00468B" text-anchor="middle">AI</text>
+
+      <!-- event tree: IE -> A -> B, three end states -->
+      <g fill="none" stroke="#2B6CA3" stroke-width="2" stroke-linecap="round">
+        <path d="M128,62 H164"/>
+        <path d="M164,40 V84"/>
+        <path d="M164,40 H214"/><path d="M214,24 V56"/>
+        <path d="M214,24 H294"/><path d="M214,56 H294"/>
+        <path d="M164,84 H294"/>
+      </g>
+      <g stroke="#FFFFFF" stroke-width="1.5">
+        <circle cx="298" cy="24" r="5" fill="#1FA5DB"/>
+        <circle cx="298" cy="56" r="5" fill="#E6AE47"/>
+        <circle cx="298" cy="84" r="5" fill="#E6AE47"/>
+      </g>
+
+      <!-- main control room: three displays on a console -->
+      <g stroke="#2B6CA3" stroke-width="2" stroke-linejoin="round">
+        <rect x="58" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <rect x="128" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <rect x="198" y="128" width="64" height="42" rx="3" fill="#FFFFFF"/>
+        <path d="M90,170 V180 M160,170 V180 M230,170 V180" fill="none"/>
+        <path d="M40,180 H280 L268,196 H52 Z" fill="#DCEBF6"/>
+      </g>
+      <g fill="none" stroke="#1FA5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="64,160 76,154 86,157 98,145 114,148"/>
+        <polyline points="204,158 216,150 228,154 240,140 256,144"/>
+      </g>
+      <g fill="#1FA5DB" fill-opacity=".55">
+        <rect x="138" y="152" width="8" height="12"/><rect x="150" y="144" width="8" height="20"/>
+        <rect x="162" y="148" width="8" height="16"/><rect x="174" y="138" width="8" height="26"/>
+      </g>
+      <path d="M56,96 C56,112 90,116 90,126" fill="none" stroke="#1FA5DB" stroke-width="1.5" stroke-dasharray="3 4" stroke-opacity=".7"/>
+    </svg>
+
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="lead">
+      <p class="lead-welcome">{{ home.welcome.en|safe }}</p>
+      <p class="lead-welcome lead-ko" lang="ko">{{ home.welcome.ko|safe }}</p>
+      <hr class="lead-rule">
+      <p class="lead-main">{{ home.statement.en|safe }}</p>
+      <p class="lead-main-ko" lang="ko">{{ home.statement.ko|safe }}</p>
+    </div>
+
+    <!-- research philosophy: nuclear technology ∩ AI → safer, more economical nuclear energy -->
+    <figure class="phil" lang="en" aria-label="Nuclear technology and artificial intelligence, brought together, toward safer and more economical nuclear energy">
+      <svg class="phil-wide" viewBox="0 0 1000 380" aria-hidden="true">
+        <defs><clipPath id="ph-clip-w"><circle cx="280" cy="190" r="150"/></clipPath></defs>
+        <circle cx="480" cy="190" r="150" fill="#1FA5DB" fill-opacity=".09" clip-path="url(#ph-clip-w)"/>
+        <circle cx="280" cy="190" r="150" fill="none" stroke="#00468B" stroke-width="1.4"/>
+        <circle cx="480" cy="190" r="150" fill="none" stroke="#1FA5DB" stroke-width="1.4"/>
+        <text class="ph-l" x="205" y="182">Nuclear</text><text class="ph-l" x="205" y="208">Technology</text>
+        <text class="ph-k" x="205" y="236">원자력 기술</text>
+        <text class="ph-l" x="555" y="182">Artificial</text><text class="ph-l" x="555" y="208">Intelligence</text>
+        <text class="ph-k" x="555" y="236">인공지능</text>
+        <image href="assets/logo/nairo-wordmark.png" x="340" y="176" width="80" height="28"/>
+        <line x1="644" y1="190" x2="702" y2="190" stroke="#8FA3B3" stroke-width="1.2"/>
+        <path d="M697,185 L704,190 L697,195" fill="none" stroke="#8FA3B3" stroke-width="1.2"/>
+        <text class="ph-o" x="722" y="178">Safer</text>
+        <text class="ph-o" x="722" y="214">&amp; more economical</text>
+        <text class="ph-c" x="724" y="246">NUCLEAR ENERGY</text>
+        <text class="ph-k ph-start" x="724" y="272">더 안전하고 경제적인 원자력에너지</text>
+      </svg>
+      <svg class="phil-narrow" viewBox="0 0 360 596" aria-hidden="true">
+        <defs><clipPath id="ph-clip-n"><circle cx="180" cy="140" r="110"/></clipPath></defs>
+        <circle cx="180" cy="280" r="110" fill="#1FA5DB" fill-opacity=".09" clip-path="url(#ph-clip-n)"/>
+        <circle cx="180" cy="140" r="110" fill="none" stroke="#00468B" stroke-width="1.4"/>
+        <circle cx="180" cy="280" r="110" fill="none" stroke="#1FA5DB" stroke-width="1.4"/>
+        <text class="ph-l" x="180" y="88">Nuclear</text><text class="ph-l" x="180" y="112">Technology</text>
+        <text class="ph-k" x="180" y="138">원자력 기술</text>
+        <image href="assets/logo/nairo-wordmark.png" x="118" y="189" width="124" height="43"/>
+        <text class="ph-l" x="180" y="296">Artificial</text><text class="ph-l" x="180" y="320">Intelligence</text>
+        <text class="ph-k" x="180" y="346">인공지능</text>
+        <line x1="180" y1="404" x2="180" y2="440" stroke="#8FA3B3" stroke-width="1.2"/>
+        <path d="M175,435 L180,442 L185,435" fill="none" stroke="#8FA3B3" stroke-width="1.2"/>
+        <text class="ph-o ph-mid" x="180" y="482">Safer</text>
+        <text class="ph-o ph-mid" x="180" y="516">&amp; more economical</text>
+        <text class="ph-c ph-mid" x="180" y="550">NUCLEAR ENERGY</text>
+        <text class="ph-k" x="180" y="574">더 안전하고 경제적인 원자력에너지</text>
+      </svg>
+    </figure>
+{% if site.recruiting.show %}
+
+    <aside class="recruit" aria-labelledby="recruit-title">
+      <p class="recruit-tag" id="recruit-title">Join us{{ m.ko('구성원 모집') }}</p>
+      <p class="recruit-en">{{ site.recruiting.en }}</p>
+      <p class="recruit-ko" lang="ko">{{ site.recruiting.ko }}</p>
+      <a class="btn primary" href="contact.html#join">Get in touch</a>
+    </aside>
+{% endif %}
+  </div>
+</section>
+
+<section id="news" class="news-band">
+  <div class="wrap">
+    <div class="sec-head"><h2>News{{ m.ko('소식') }}</h2></div>
+    <ul class="news-simple" lang="ko">
+{% for n in news %}
+      <li><span class="news-date">[{{ n.date }}]</span><span>{{ n.text|safe }}</span></li>
+{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

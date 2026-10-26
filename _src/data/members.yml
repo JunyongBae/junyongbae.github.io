@@ -1,0 +1,23 @@
+# Members 페이지. 그룹을 추가하려면 아래 주석 예시를 복사해 groups 목록에 붙여넣습니다.
+# 사진은 figures/members/<이름>.jpg (정사각형)으로 넣고, 없으면 initials가 대신 보입니다.
+# 모집 안내 상자는 site.yml의 recruiting.show 로 켜고 끕니다.
+
+groups:
+  - title: "Principal Investigator"
+    members:
+      - name: "Junyong Bae"
+        position: "Assistant Professor"
+        topic: "Agentic PSA · Operator support · Trustworthy AI"
+        photo: "figures/professor.jpg"
+        initials: "JB"
+        link: "professor.html"
+
+  # - title: "Undergraduate Researchers"
+  #   title_ko: "학부연구생"
+  #   members:
+  #     - name: "Gildong Hong"
+  #       position: "Undergraduate Researcher · 2027–"
+  #       topic: "Dynamic PSA, surrogate models"
+  #       photo: "figures/members/gildong-hong.jpg"
+  #       initials: "GH"
+  #       email: "name@example.ac.kr"

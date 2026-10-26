@@ -1,0 +1,55 @@
+# 사이트 공통 정보: 연구실 이름·소속·연락처·모집 안내·상단 메뉴
+# 여기 값을 바꾸면 모든 페이지(배너, 푸터, Contact, 검색엔진 정보)에 함께 반영됩니다.
+
+base_url: "https://junyongbae.github.io/"
+
+lab:
+  short: "NAIRO Lab"
+  acronym: "NAIRO"
+  name: "Nuclear AI for Risk & Operations Lab"
+  name_ko: "원자력 AI 리스크·운전 연구실"
+
+affiliation:
+  en: "GAST-Mechanical Engineering, Changwon National University"
+  ko: "국립창원대학교 GAST-기계공학대학"
+  university: "Changwon National University"
+  university_url: "https://www.changwon.ac.kr/"
+
+pi: "Junyong Bae"          # 논문 저자 목록에서 이 이름이 자동으로 굵게 표시됩니다
+email: "junyong8090@changwon.ac.kr"
+scholar: "https://scholar.google.com/citations?user=5RxgABAAAAAJ&hl=ko"
+
+office:
+  en: "Building 53, Room 501"
+  ko: "53호관 501호"
+address: "20 Changwondaehak-ro, Uichang-gu, Changwon-si, Gyeongsangnam-do 51140, Republic of Korea"
+
+copyright_year: 2026
+
+# 모집 안내 (Home 표지 상자 + Members 페이지). 모집을 멈추려면 show: false
+recruiting:
+  show: true
+  en: >-
+    NAIRO Lab is welcoming its first members — undergraduate researchers
+    interested in AI for nuclear power plant operation and risk assessment.
+  ko: >-
+    NAIRO 연구실의 첫 구성원을 모집합니다. 원자력발전소 운전과 리스크 평가를 위한 AI에 관심 있는
+    학부연구생의 연락을 기다립니다.
+
+# Contact 페이지 '진학 희망 학생' 문구
+prospective:
+  en: "Interested in nuclear AI? Feel free to drop an email anytime."
+  ko: "원자력 AI에 관심 있는 학생이라면 언제든 편하게 이메일 주세요."
+
+# 상단 메뉴. pages.yml에서 enabled: false 인 페이지는 메뉴에서 자동으로 빠집니다.
+nav:
+  - { label: "Home", page: "index.html" }
+  - label: "Team"
+    id: "team"
+    children:
+      - { label: "Professor", page: "professor.html" }
+      - { label: "Members", page: "members.html" }
+  - { label: "Research", page: "research.html" }
+  - { label: "Projects", page: "projects.html" }
+  - { label: "Publications", page: "publications.html" }
+  - { label: "Contact", page: "contact.html" }

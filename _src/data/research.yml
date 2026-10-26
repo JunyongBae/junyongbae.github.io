@@ -1,0 +1,79 @@
+# Research 페이지. intro와 각 분야 desc에는 <b> 같은 HTML을 쓸 수 있습니다.
+# 그림은 figures/thumbs/ 의 웹용 이미지를 씁니다.
+
+intro:
+  en: >-
+    NAIRO — <b>N</b>uclear <b>AI</b> for <b>R</b>isk &amp; <b>O</b>perations — works on two sides of nuclear
+    power plant safety, how plants are <b>operated</b> and how their <b>risk</b> is assessed, and on the trustworthy AI
+    that both depend on.
+  ko: "NAIRO는 원자력발전소 안전의 두 축인 <b>운전</b>과 <b>리스크&nbsp;평가</b>, 그리고 이 둘을 뒷받침하는 신뢰할&nbsp;수&nbsp;있는&nbsp;AI를 연구합니다."   # &nbsp; = 줄바꿈 없이 붙여 쓰기
+
+thrusts:
+  - id: "operation"
+    kicker: "O · Operations"
+    title: "Operator Support Systems"
+    title_ko: "운전원 지원 시스템"
+    summary: "Trend prediction · action validation · autonomous control"
+    tagline:
+      en: "Helping crews see where the plant is heading — and act on it."
+      ko: "발전소가 어디로 향하는지 보고, 그에 맞게 대응할 수 있도록 운전원을 돕습니다."
+    desc:
+      en: >-
+        As main control rooms go digital, AI opens a new route to operator support — especially for advanced
+        reactors, where one crew may face multiple modules and remote siting. We build models that predict how plant
+        parameters will evolve after an operator action, check actions before they are taken, diagnose abnormal events,
+        and learn control strategies for autonomous operation.
+      ko: >-
+        주제어실이 디지털화되면서 AI는 운전원 지원의 새로운 길을 열고 있습니다. 특히 한 운전조가 여러 모듈을
+        맡거나 원격 운전이 이루어질 수 있는 차세대 원자로에서 그 필요성이 큽니다. 저희는 운전원 조치 이후 발전소 변수가 어떻게
+        변할지 예측하고, 조치를 실행하기 전에 검증하며, 비정상 사건을 진단하고, 자율운전을 위한 제어 전략을 학습하는 모델을 개발합니다.
+    keywords: ["Parameter trend prediction", "Operation validation", "Abnormal event diagnosis", "Deep reinforcement learning", "Advanced reactors"]
+    figure: "figures/thumbs/net-rl.webp"
+    alt: "Animation of a deep reinforcement learning agent operating a nuclear power plant toward multiple objectives"
+    caption: "Deep reinforcement learning for multi-objective plant operation"
+
+  - id: "risk"
+    kicker: "R · Risk"
+    title: "Agentic & Dynamic PSA"
+    title_ko: "에이전틱·동적 PSA"
+    summary: "Simulation optimization · limit surfaces · automatic event trees"
+    tagline:
+      en: "Making plant risk assessment faster without making it less thorough."
+      ko: "철저함은 그대로, 발전소 리스크 평가는 더 빠르게."
+    desc:
+      en: >-
+        Probabilistic safety assessment still depends on labour-intensive analysis and computationally heavy
+        accident codes. We use AI to accelerate it: choosing which scenarios are worth simulating, searching the limit
+        surface between success and failure, generating accident sequences and event trees automatically, and replacing
+        expensive codes with surrogate models.
+      ko: >-
+        확률론적 안전성평가(PSA)는 여전히 많은 수작업 분석과 계산 부담이 큰 사고 해석 코드에 의존합니다.
+        저희는 AI로 이 과정을 가속합니다. 시뮬레이션할 가치가 있는 시나리오를 선별하고, 성공과 실패를 가르는 한계면을 탐색하며,
+        사고 경위와 사건수목을 자동으로 생성하고, 계산이 무거운 코드를 대리 모델로 대체합니다.
+    keywords: ["Dynamic PSA", "Simulation optimization", "Limit surface search", "Automatic event tree generation", "Surrogate models"]
+    figure: "figures/thumbs/asoc-limitsurface.webp"
+    alt: "Animation of a deep neural network with Monte Carlo dropout searching the limit surface between success and failure"
+    caption: "Limit surface search with DNN and Monte Carlo dropout"
+
+  - id: "trust"
+    kicker: "AI · Foundation"
+    title: "Trustworthy AI"
+    title_ko: "신뢰할 수 있는 AI"
+    summary: "Uncertainty quantification · explainability · data integrity"
+    foundation: true          # 상단 카드를 하늘색(기반)으로 표시
+    tagline:
+      en: "AI for safety-critical systems has to earn its trust."
+      ko: "안전이 중요한 시스템의 AI는 스스로 신뢰를 증명해야 합니다."
+    desc:
+      en: >-
+        Underneath both directions, we make models state what they do not know and show why they decide what
+        they decide: uncertainty quantification, explainable AI, case-based reasoning, and mechanistic interpretability —
+        along with detecting manipulated plant data before a model acts on it.
+      ko: >-
+        운전과 리스크 평가 모두의 바탕에서, 저희는 모델이 무엇을 모르는지 스스로 밝히고 왜 그렇게 판단했는지
+        보여주도록 만듭니다. 불확실성 정량화, 설명 가능한 AI, 사례 기반 추론, 기계론적 해석 가능성을 연구하며, 모델이 판단하기 전에
+        조작된 발전소 데이터를 탐지하는 기술도 함께 다룹니다.
+    keywords: ["Uncertainty quantification", "Explainable AI", "Case-based reasoning", "Mechanistic interpretability", "Cyber-attack detection"]
+    figure: "figures/thumbs/asoc-twostage.webp"
+    alt: "Map of a deep learning model's output across two accident timing variables"
+    caption: "Two-stage trend prediction with UQ"

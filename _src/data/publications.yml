@@ -1,0 +1,159 @@
+# Publications 페이지.
+# - current: 창원대 이후(위쪽 섹션), before: 창원대 이전(접힌 아코디언)
+# - 각 목록은 최신 → 오래된 순. 번호 [J14]…[J1], [C17]…[C1]과 개수 표시는 빌드할 때 자동 계산됩니다.
+# - status: published 또는 review(심사 중). review면 학술지명 대신 UNDER REVIEW 표시
+# - authors에서 site.yml의 pi 이름은 자동으로 굵게 표시됩니다
+# - figure는 figures/thumbs/ 의 웹용 이미지 (새 그림은 원본을 figures/에 넣고 thumbs를 만들어 달라고 요청)
+
+current:
+  title: "2026"
+  journals:
+    - id: "pub-fdi"
+      status: "review"
+      title: "False Data Injection Detection in Nuclear Power Plants using Autoencoder with Latent-Conditioned Mahalanobis Scoring"
+      authors: "Junyong Bae, Ji Hyeon Shin, Seung Jun Lee"
+      figure: "figures/thumbs/net-fdi.webp"
+      alt: "Key figure: cluster-wise analysis of autoencoder reconstruction residuals"
+  conferences: []
+
+before:
+  title: "Before CWNU"
+  title_ko: "창원대 이전"
+  journals:
+    - id: "pub-2026-energies"
+      year: 2026
+      venue: "Energies"
+      volume: 19
+      title: "Latent Trajectory Forecasting for Long-Horizon Multivariate Nuclear Power Plant Parameter Prediction"
+      doi: "10.3390/en19133048"
+      authors: "Donghee Jung, Junyong Bae, Hyun Gook Kang, Seung Jun Lee"
+      figure: "figures/thumbs/energies-latent.webp"
+      alt: "Key figure: latent trajectory forecasting for long-horizon parameter prediction"
+    - id: "pub-2026-pne"
+      year: 2026
+      venue: "Progress in Nuclear Energy"
+      volume: 198
+      title: "Efficient Simulation of Massive Scenario Sets via Redundant Timeline Identification and Reuse"
+      doi: "10.1016/j.pnucene.2026.106451"
+      authors: "Kyeong Seo Kim, Junyong Bae, Wooseok Jo, Dong-San Kim, Seung Jun Lee"
+      figure: "figures/thumbs/pne-timeline.webp"
+      alt: "Key figure: redundant timeline identification and reuse for massive scenario sets"
+    - id: "pub-2026-asoc"
+      year: 2026
+      venue: "Applied Soft Computing"
+      volume: 186
+      title: "Two-Stage Deep Learning Model for Nuclear Power Plant Parameter Trend Prediction with Epistemic Uncertainty Quantification"
+      doi: "10.1016/j.asoc.2025.114233"
+      authors: "Junyong Bae, Kyeong Seo Kim, Seung Jun Lee"
+      figure: "figures/thumbs/asoc-twostage.webp"
+      alt: "Key figure: two-stage deep learning model with epistemic uncertainty"
+    - id: "pub-2025-pne"
+      year: 2025
+      venue: "Progress in Nuclear Energy"
+      volume: 189
+      title: "An Approach to Validating Abnormal Event Diagnoses with Explainable AI"
+      doi: "10.1016/j.pnucene.2025.105939"
+      authors: "Ji Hyeon Shin, Junyong Bae, Seung Jun Lee"
+      figure: "figures/thumbs/pne-xai.webp"
+      alt: "Key figure: validating abnormal event diagnoses with explainable AI"
+    - id: "pub-2025-ress"
+      year: 2025
+      venue: "Reliability Engineering & System Safety"
+      volume: 266
+      title: "Automatic Accident Sequence Generation using Optimized Simulations for Dynamic Probabilistic Safety Assessment"
+      doi: "10.1016/j.ress.2025.111643"
+      authors: "Wooseok Jo, Junyong Bae, Dong-San Kim, Seung Jun Lee"
+      figure: "figures/thumbs/ress-dpsa.webp"
+      alt: "Key figure: automatic accident sequence generation"
+    - id: "pub-2024-kjce"
+      year: 2024
+      venue: "Korean Journal of Chemical Engineering"
+      title: "Current Progress in the Application of Artificial Intelligence for Nuclear Power Plant Operation"
+      doi: "10.1007/s11814-024-00246-7"
+      authors: "Junyong Bae, Seung Jun Lee"
+      figure: "figures/thumbs/kjce-review.webp"
+      alt: "Key figure: review of AI applications for NPP operation"
+    - id: "pub-2023-net-drl"
+      year: 2023
+      venue: "Nuclear Engineering and Technology"
+      volume: 55
+      title: "Deep Reinforcement Learning for a Multi-Objective Operation in a Nuclear Power Plant"
+      doi: "10.1016/j.net.2023.06.009"
+      authors: "Junyong Bae, Jae Min Kim, Seung Jun Lee"
+      figure: "figures/thumbs/net-rl.webp"
+      alt: "Key figure: deep reinforcement learning for multi-objective NPP operation"
+      note: "Best Paper Award, Nuclear Engineering and Technology, Korean Nuclear Society."
+    - id: "pub-2023-net-startup"
+      year: 2023
+      venue: "Nuclear Engineering and Technology"
+      volume: 55
+      title: "Strategy to Coordinate Actions through a Plant Parameter Prediction Model during Startup Operation of a Nuclear Power Plant"
+      doi: "10.1016/j.net.2022.11.012"
+      authors: "Jae Min Kim, Junyong Bae, Seung Jun Lee"
+      figure: "figures/thumbs/net-startup.webp"
+      alt: "Key figure: coordinating startup actions with a parameter prediction model"
+    - id: "pub-2023-asoc"
+      year: 2023
+      venue: "Applied Soft Computing"
+      volume: 132
+      title: "An Interpretable Convolutional Neural Network for Nuclear Power Plant Abnormal Events"
+      doi: "10.1016/j.asoc.2022.109792"
+      authors: "Ji Hyeon Shin, Junyong Bae, Jae Min Kim, Seung Jun Lee"
+      figure: "figures/thumbs/asoc-icnn.webp"
+      alt: "Key figure: interpretable CNN for abnormal events"
+    - id: "pub-2022-ned"
+      year: 2022
+      venue: "Nuclear Engineering and Design"
+      volume: 397
+      title: "Operation Validation System to Prevent Human Errors in Nuclear Power Plants"
+      doi: "10.1016/j.nucengdes.2022.111949"
+      authors: "Jeeyea Ahn, Junyong Bae, Byung Joo Min, Seung Jun Lee"
+      figure: "figures/thumbs/ned-validation.webp"
+      alt: "Key figure: operation validation system preventing human errors"
+    - id: "pub-2022-asoc"
+      year: 2022
+      venue: "Applied Soft Computing"
+      volume: 124
+      title: "Limit Surface/States Searching Algorithm with a Deep Neural Network and Monte Carlo Dropout for Nuclear Power Plant Safety Assessment"
+      doi: "10.1016/j.asoc.2022.109007"
+      authors: "Junyong Bae, Jong Woo Park, Seung Jun Lee"
+      figure: "figures/thumbs/asoc-limitsurface.webp"
+      alt: "Key figure: limit surface search with DNN and Monte Carlo dropout"
+    - id: "pub-2021-eswa"
+      year: 2021
+      venue: "Expert Systems with Applications"
+      volume: 186
+      title: "Real-time Prediction of Nuclear Power Plant Parameter Trends Following Operator Actions"
+      doi: "10.1016/j.eswa.2021.115848"
+      authors: "Junyong Bae, Geunhee Kim, Seung Jun Lee"
+      figure: "figures/thumbs/eswa-trend.webp"
+      alt: "Key figure: real-time parameter trend prediction after operator actions"
+    - id: "pub-2020-nt"
+      year: 2020
+      venue: "Nuclear Technology"
+      volume: 206
+      title: "Comparison of Multi-layer Perceptron and Long Short-Term Memory for Plant Parameter Trend Prediction"
+      doi: "10.1080/00295450.2019.1693215"
+      authors: "Junyong Bae, Jeeyea Ahn, Seung Jun Lee"
+      figure: "figures/thumbs/nt-mlp-lstm.webp"
+      alt: "Key figure: MLP vs LSTM comparison for trend prediction"
+
+  # award가 있으면 수상 배지가 붙고 Professor 페이지 수상 목록으로 연결됩니다
+  conferences:
+    - { year: 2026, title: "Feature Space Memory Banks for Example-Based Model Explanation in Safety-Critical Applications", venue: "ESREL, Braga" }
+    - { year: 2025, title: "Example-based Explanation Framework for NPP Parameter Trend Prediction using Latent Space Similarity", venue: "KNS Fall, Changwon" }
+    - { year: 2025, title: "Dynamic Risk Assessment Framework with Limit Surface Search and Success and Failure Domains Analysis", venue: "ASRAM, Pattaya", award: "GRAND PRIZE" }
+    - { year: 2025, title: "Epistemic Uncertainty in Deep Learning Models and Its Application for Model Performance Improvement", venue: "ANS Annual, Chicago" }
+    - { year: 2024, title: "Parameters Trend Prediction using Two-Stage Deep Learning Models", venue: "ISOFIC, Jeju", award: "BEST STUDENT PAPER" }
+    - { year: 2024, title: "Epistemic Uncertainty in Deep Learning Models for Simulation Optimization and Consequence Prediction", venue: "KNS Fall, Changwon", award: "BEST PAPER" }
+    - { year: 2024, title: "Deep Autoencoding Gaussian Mixture Model for Detection of Manipulation Attacks", venue: "PSAM17 & ASRAM, Sendai" }
+    - { year: 2023, title: "Postprocessing of Multidimensional Limit Surfaces Searched by a Deep Learning-based Algorithm", venue: "KNS Fall, Gyeongju", award: "BEST PAPER" }
+    - { year: 2023, title: "NPP Emergency Response Planning with Tree Search and Deep Learning", venue: "ESREL, Southampton" }
+    - { year: 2022, title: "Sensitivity Study of a Guided Simulation Algorithm with Deep Learning", venue: "ASRAM, Daejeon" }
+    - { year: 2022, title: "Application of Deep Reinforcement Learning for Multi-objective and Continuous Control of Reactor Coolant", venue: "KNS Fall, Changwon" }
+    - { year: 2022, title: "Deep Learning for Guided Simulation of Scenarios for Dynamic PRA", venue: "PSAM 16, Honolulu" }
+    - { year: 2021, title: "Uncertainty-aware Limit Surface Search Algorithm using DNN", venue: "ANS Winter, Washington DC" }
+    - { year: 2021, title: "Limit Surface Search Algorithm with ANN and Monte Carlo Dropout Uncertainty Quantification", venue: "PSA 2021, Online" }
+    - { year: 2021, title: "Adaptive Sampling for Limit Surface Search using DNN and Monte Carlo Dropout", venue: "KNS Fall, Changwon", award: "PSA STUDENT PAPER" }
+    - { year: 2019, title: "NPP Parameter Prediction Strategy for Human Error Detection", venue: "ANS Winter, Washington DC" }
+    - { year: 2018, title: "Operation Validation System through Time Series Forecasting by ANN", venue: "KNS Student Conference, Yeosu", award: "BEST PAPER" }

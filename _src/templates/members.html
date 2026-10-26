@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+
+{{ m.page_head('Members', '구성원', eyebrow='Team') }}
+
+<section>
+  <div class="wrap">
+{% for g in members.groups %}
+
+    <div class="member-group">
+      <div class="sec-head"><h2>{{ g.title }}{{ m.ko(g.title_ko) }}</h2></div>
+      <div class="member-grid">
+{% for p in g.members %}
+        <{{ 'a' if p.link else 'div' }} class="member"{% if p.link %} href="{{ p.link }}"{% endif %}>
+          <div class="photo">
+            <span class="initials" aria-hidden="true">{{ p.initials }}</span>
+{% if p.photo %}
+            <img src="{{ p.photo }}" alt="" onerror="this.remove()">
+{% endif %}
+          </div>
+          <div class="info">
+            <p class="pos">{{ p.position }}</p>
+            <h3>{{ p.name }}</h3>
+{% if p.topic %}
+            <p class="topic">{{ p.topic }}</p>
+{% endif %}
+{% if p.email %}
+            <a class="mail" href="mailto:{{ p.email }}">{{ p.email }}</a>
+{% endif %}
+          </div>
+        </{{ 'a' if p.link else 'div' }}>
+{% endfor %}
+      </div>
+    </div>
+{% endfor %}
+{% if site.recruiting.show %}
+
+    <div class="member-group">
+      <div class="sec-head"><h2>Students &amp; Researchers{{ m.ko('학생 및 연구원') }}</h2></div>
+      <div class="empty">
+        <h3>Join NAIRO Lab{{ m.ko('함께할 사람을 찾습니다') }}</h3>
+        <p>{{ site.recruiting.en }}</p>
+        <p class="ko-line" lang="ko">{{ site.recruiting.ko }}</p>
+        <div class="btns">
+          <a class="btn primary" href="contact.html#join">Get in touch</a>
+          <a class="btn" href="research.html">Our research</a>
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+  </div>
+</section>
+
+{% endblock %}

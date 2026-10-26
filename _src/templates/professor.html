@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block jsonld %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.pi|tojson }},
+  "url": {{ page.url|tojson }},
+  "email": {{ ('mailto:' ~ site.email)|tojson }},
+  "jobTitle": "Assistant Professor",
+  "worksFor": {
+    "@type": "ResearchOrganization",
+    "name": {{ site.lab.name|tojson }},
+    "alternateName": {{ site.lab.short|tojson }},
+    "url": {{ site.base_url|tojson }},
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": {{ site.affiliation.university|tojson }},
+      "url": {{ site.affiliation.university_url|tojson }}
+    }
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Ulsan National Institute of Science and Technology",
+    "alternateName": "UNIST",
+    "url": "https://www.unist.ac.kr/"
+  },
+  "knowsAbout": [
+    "Nuclear engineering",
+    "Probabilistic safety assessment",
+    "Dynamic PSA",
+    "Deep learning",
+    "Uncertainty quantification",
+    "Explainable AI",
+    "Nuclear power plant operator support systems"
+  ],
+  "sameAs": [
+    {{ site.scholar.split('&')[0]|tojson }}
+  ]
+}
+</script>
+{% endblock %}
+
+{% macro role(r) -%}
+      <div class="role">
+        <span class="yr">{{ r.period }}</span>
+        <div>
+          <h3>{{ r.title }}</h3>
+          <p class="where">{{ r.where }}</p>
+{% if r.detail %}
+          <p class="detail">{{ r.detail|safe }}</p>
+{% endif %}
+        </div>
+      </div>
+{%- endmacro %}
+
+{% block content %}
+
+{{ m.page_head('Professor', '교수', eyebrow='Team') }}
+
+<section>
+  <div class="wrap profile">
+    <!-- photo: figures/professor.jpg (3:4 portrait); the initials show if it is missing -->
+    <div class="portrait">
+      <span class="initials" aria-hidden="true">{{ professor.initials }}</span>
+      <img src="{{ professor.photo }}" alt="{{ site.pi }}" onerror="this.remove()">
+    </div>
+    <div>
+      <h2>{{ professor.name }}{{ m.ko(professor.name_ko) }}</h2>
+      <p class="position">{{ professor.position.en }}</p>
+      <p class="position ko-line" lang="ko">{{ professor.position.ko }}</p>
+      <p class="bio">{{ professor.bio|safe }}</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:{{ site.email }}">Email</a>
+        <a class="btn" href="{{ site.scholar }}">Google Scholar</a>
+        <a class="btn" href="{{ professor.cv }}">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience &amp; Education{{ m.ko('경력 및 학력') }}</h2><span class="count">{{ professor.experience_note }}</span></div>
+
+    <p class="track-head">Professional Experience{{ m.ko('경력') }}</p>
+    <div class="track">
+{% for r in professor.experience %}
+{{ role(r) }}
+{% endfor %}
+    </div>
+
+    <p class="track-head">Education{{ m.ko('학력') }}</p>
+    <div class="track">
+{% for r in professor.education %}
+{{ role(r) }}
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap">
+    <div class="sec-head"><h2>Honors &amp; Awards{{ m.ko('수상') }}</h2></div>
+{% for h in professor.honors %}
+    <div class="honor"><span class="yr">{{ h.year }}</span><p>{{ h.text|safe }}</p></div>
+{% endfor %}
+  </div>
+</section>
+
+{% endblock %}

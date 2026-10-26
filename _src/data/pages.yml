@@ -1,0 +1,62 @@
+# 페이지 목록과 검색엔진·링크 미리보기 정보.
+# 페이지를 숨기려면 enabled: false → 다음 빌드 때 파일·메뉴·sitemap에서 모두 빠집니다.
+
+- file: "index.html"
+  template: "index.html"
+  enabled: true
+  title: "NAIRO Lab — Nuclear AI for Risk & Operations Lab"
+  description: "NAIRO Lab (Nuclear AI for Risk & Operations Lab) develops trustworthy AI for nuclear power plant safety: operator support systems, dynamic and agentic PSA, and AI with quantified uncertainty."
+  og_title: "NAIRO Lab — Nuclear AI for Risk & Operations Lab"
+  og_description: "Trustworthy AI for nuclear power plant safety: operator support systems, dynamic and agentic PSA, and AI with quantified uncertainty."
+
+- file: "professor.html"
+  template: "professor.html"
+  enabled: true
+  title: "Professor — NAIRO Lab"
+  description: "Junyong Bae, Assistant Professor at GAST-Mechanical Engineering, Changwon National University, and principal investigator of NAIRO Lab."
+  og_title: "Junyong Bae — NAIRO Lab"
+  og_description: "Assistant Professor at GAST-Mechanical Engineering, Changwon National University, and principal investigator of NAIRO Lab."
+  og_type: "profile"
+  author: "Junyong Bae"
+  robots: "noimageindex"    # 사진이 이미지 검색에 뜨지 않게
+
+- file: "members.html"
+  template: "members.html"
+  enabled: true
+  title: "Members — NAIRO Lab"
+  description: "Members of NAIRO Lab (Nuclear AI for Risk & Operations Lab)."
+  og_title: "Members — NAIRO Lab"
+  og_description: "Members of NAIRO Lab (Nuclear AI for Risk & Operations Lab)."
+  robots: "noimageindex"
+
+- file: "research.html"
+  template: "research.html"
+  enabled: true
+  title: "Research — NAIRO Lab"
+  description: "Research at NAIRO Lab: operator support systems for nuclear power plants, agentic and dynamic PSA, and trustworthy AI with quantified uncertainty."
+  og_title: "Research — NAIRO Lab"
+  og_description: "Operator support systems, agentic and dynamic PSA, and trustworthy AI for nuclear power plant safety."
+
+- file: "projects.html"
+  template: "projects.html"
+  enabled: false            # 2026-10: 계약 과제 비공개를 위해 내림. 공개 과제가 생기면 true
+  title: "Projects — NAIRO Lab"
+  description: "Research projects of NAIRO Lab (Nuclear AI for Risk & Operations), Changwon National University."
+  og_title: "Projects — NAIRO Lab"
+  og_description: "Research projects of NAIRO Lab, Changwon National University."
+
+- file: "publications.html"
+  template: "publications.html"
+  enabled: true
+  title: "Publications — NAIRO Lab"
+  description: "Journal articles and conference presentations from NAIRO Lab on AI for nuclear power plant operation and risk assessment."
+  og_title: "Publications — NAIRO Lab"
+  og_description: "Journal articles and conference presentations on AI for nuclear power plant operation and risk assessment."
+
+- file: "contact.html"
+  template: "contact.html"
+  enabled: true
+  title: "Contact — NAIRO Lab"
+  description: "Contact NAIRO Lab (Nuclear AI for Risk & Operations Lab) at GAST-Mechanical Engineering, Changwon National University."
+  og_title: "Contact — NAIRO Lab"
+  og_description: "Contact NAIRO Lab at GAST-Mechanical Engineering, Changwon National University."

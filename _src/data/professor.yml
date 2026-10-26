@@ -1,0 +1,54 @@
+# Professor 페이지. 경력·학력·수상은 위에서부터 최신순으로 적습니다.
+
+name: "Junyong Bae, Ph.D."
+name_ko: "배준용"
+initials: "JB"
+photo: "figures/professor.jpg"     # 3:4 세로 사진
+position:
+  en: "Principal Investigator, NAIRO Lab · Assistant Professor, GAST-Mechanical Engineering, Changwon National University"
+  ko: "국립창원대학교 GAST-기계공학대학 조교수"
+bio: >-
+  Dr. Bae received a Ph.D. in Nuclear Engineering from UNIST in 2025, worked as a postdoctoral researcher
+  at UNIST and at the Korea Atomic Energy Research Institute (KAERI), and joined Changwon National University in October 2026.
+cv: "CV_junyong.pdf"
+experience_note: "CWNU · KAERI · UNIST"
+
+experience:
+  - period: "Oct 2026 — Present"
+    title: "Assistant Professor"
+    where: "GAST-Mechanical Engineering, Changwon National University (CWNU)"
+    detail: "Principal Investigator, NAIRO Lab"
+  - period: "Mar 2026 — Sep 2026"
+    title: "Postdoctoral Researcher"
+    where: "Risk Assessment Research Division, Korea Atomic Energy Research Institute (KAERI)"
+    detail: "Advisor: Hyeonmin Kim, Ph.D."
+  - period: "Mar 2025 — Mar 2026"
+    title: "Postdoctoral Researcher"
+    where: "Nuclear Safety Assessment and Plant HMI Evolution Lab, UNIST"
+    detail: "Advisor: Prof. Seung Jun Lee"
+
+education:
+  - period: "Feb 2025"
+    title: "Ph.D. in Nuclear Engineering"
+    where: "Ulsan National Institute of Science and Technology (UNIST)"
+    detail: >-
+      Dissertation: <cite>Deep Learning-based Optimized Simulation and Consequence Estimation with Neural
+      Network Uncertainty for Dynamic Risk Assessment of Nuclear Power Plants</cite>. Advisor: Prof. Seung Jun Lee.
+  - period: "Feb 2019"
+    title: "B.S. in Nuclear Science and Engineering"
+    where: "UNIST — minor in Electrical Engineering"
+    detail: "Graduated cum laude."
+
+# text에는 <cite> 같은 HTML을 쓸 수 있습니다
+honors:
+  - { year: "2026", text: "Best Paper Award, <cite>Nuclear Engineering and Technology</cite>, Korean Nuclear Society" }
+  - { year: "2025", text: "Grand Prize, Best Oral Presentation Awards, ASRAM 2025" }
+  - { year: "2025", text: "Outstanding Doctoral Dissertation Award, Department of Nuclear Engineering, UNIST" }
+  - { year: "2025", text: "Best Paper Award, 2024 KNS Fall Conference" }
+  - { year: "2024", text: "Best Student Paper Award, ISOFIC 2024" }
+  - { year: "2024", text: "Best Paper Award, 2023 KNS Fall Conference" }
+  - { year: "2023", text: "KNS Doosan Enerbility Scholarship" }
+  - { year: "2022", text: "KNS Park Chang-kyu PSA Student Paper Award" }
+  - { year: "2021", text: "Excellence Award, Nuclear–AI Convergence Case Study Presentation" }
+  - { year: "2018", text: "Best Paper Award, 2018 KNS Student Conference" }
+  - { year: "2017–18", text: "National Scholarship for Science and Engineering" }

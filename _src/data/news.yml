@@ -1,0 +1,8 @@
+# Home 'News'. 시간순(오래된 것 → 최신)으로, 새 소식은 맨 아래에 추가합니다.
+# text에는 <a href="...">, <i> 같은 HTML을 쓸 수 있습니다.
+
+- date: "2026.10"
+  text: '<i>Nuclear Engineering and Technology</i>에 제출한 <a href="https://doi.org/10.1016/j.net.2023.06.009">논문</a>이 한국원자력학회 우수논문상을 수상했습니다.'
+
+- date: "2026.10"
+  text: "NAIRO 연구실이 국립창원대학교 GAST-기계공학대학에 문을 열었습니다."

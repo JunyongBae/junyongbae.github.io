@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+
+{% call m.page_head('Research', '연구') %}
+    <p class="intro">{{ research.intro.en|safe }}</p>
+    <p class="intro ko-line" lang="ko">{{ research.intro.ko|safe }}</p>
+    <nav class="pillars" aria-label="Research areas">
+{% for t in research.thrusts %}
+      <a class="pillar{{ ' base' if t.foundation }}" href="#{{ t.id }}"><span class="k">{{ t.kicker|upper }}</span><b>{{ t.title }}{{ m.ko(t.title_ko) }}</b><small>{{ t.summary }}</small></a>
+{% endfor %}
+    </nav>
+{% endcall %}
+
+<section>
+  <div class="wrap">
+{% for t in research.thrusts %}
+
+    <article class="thrust" id="{{ t.id }}">
+      <div>
+        <p class="eyebrow">{{ t.kicker }}</p>
+        <h2>{{ t.title }}{{ m.ko(t.title_ko) }}</h2>
+        <p class="tagline">{{ t.tagline.en }}</p>
+        <p class="tagline ko-line" lang="ko">{{ t.tagline.ko }}</p>
+        <p class="desc">{{ t.desc.en|safe }}</p>
+        <p class="desc ko-line" lang="ko">{{ t.desc.ko|safe }}</p>
+        <ul class="keywords">
+          {% for k in t.keywords %}<li>{{ k }}</li>{% endfor %}
+
+        </ul>
+      </div>
+      <figure class="figframe">
+        {{ m.fig_img(t.figure, t.alt) }}
+        <figcaption class="figcap">Fig. — {{ t.caption }}</figcaption>
+      </figure>
+    </article>
+{% endfor %}
+
+  </div>
+</section>
+
+{% endblock %}
