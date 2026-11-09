@@ -22,11 +22,12 @@ email: "junyong8090@changwon.ac.kr"
 scholar: "https://scholar.google.com/citations?user=5RxgABAAAAAJ&hl=ko"
 
 office:
-  en: "Building 53, Room 501"
-  ko: "53호관 501호"
-lab_room:                  # 연구실 호실 (Contact 페이지)
   en: "Building 53, Room 301"
   ko: "53호관 301호"
+# 연구실 호실이 생기면 아래 주석을 풀면 Contact에 'Lab · 연구실' 줄이 나옵니다
+# lab_room:
+#   en: "Building 53, Room ○○○"
+#   ko: "53호관 ○○○호"
 address: "20 Changwondaehak-ro, Uichang-gu, Changwon-si, Gyeongsangnam-do 51140, Republic of Korea"
 
 copyright_year: 2026
