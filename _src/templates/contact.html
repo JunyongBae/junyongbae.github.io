@@ -15,6 +15,10 @@
         <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
         <dt>Office<span class="ko" lang="ko">교수실</span></dt>
         <dd>{{ site.office.en }}{{ m.ko(site.office.ko) }}</dd>
+{% if site.lab_room %}
+        <dt>Lab<span class="ko" lang="ko">연구실</span></dt>
+        <dd>{{ site.lab_room.en }}{{ m.ko(site.lab_room.ko) }}</dd>
+{% endif %}
         <dt>Address<span class="ko" lang="ko">주소</span></dt>
         <dd><a href="{{ site.affiliation.department_url }}">{{ site.affiliation.en }}</a><br>{{ site.address }}</dd>
       </dl>

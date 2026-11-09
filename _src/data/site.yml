@@ -24,6 +24,9 @@ scholar: "https://scholar.google.com/citations?user=5RxgABAAAAAJ&hl=ko"
 office:
   en: "Building 53, Room 501"
   ko: "53호관 501호"
+lab_room:                  # 연구실 호실 (Contact 페이지)
+  en: "Building 53, Room 301"
+  ko: "53호관 301호"
 address: "20 Changwondaehak-ro, Uichang-gu, Changwon-si, Gyeongsangnam-do 51140, Republic of Korea"
 
 copyright_year: 2026
