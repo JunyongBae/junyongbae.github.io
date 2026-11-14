@@ -22,6 +22,8 @@ html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 /* Korean wraps between words, never inside one; paragraphs avoid a lone short last line */
 :lang(ko){word-break:keep-all;overflow-wrap:break-word}
+/* italic Latin inside Korean text leans into the next Hangul syllable (e.g. "Technology에"); give it a hair of room */
+:lang(ko) i,:lang(ko) em,:lang(ko) cite{padding-right:.12em}
 p{text-wrap:pretty}
 a{color:var(--cherenkov-deep)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--cherenkov);outline-offset:2px}
