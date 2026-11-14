@@ -85,7 +85,7 @@ before:
       authors: "Junyong Bae, Jae Min Kim, Seung Jun Lee"
       figure: "figures/thumbs/net-rl.webp"
       alt: "Key figure: deep reinforcement learning for multi-objective NPP operation"
-      note: "Best Paper Award, Nuclear Engineering and Technology, Korean Nuclear Society."
+      note: "학회지 우수논문 금상, 한국원자력학회"
     - id: "pub-2023-net-startup"
       year: 2023
       venue: "Nuclear Engineering and Technology"

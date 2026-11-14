@@ -174,6 +174,7 @@ section{padding:56px 0;scroll-margin-top:calc(var(--topbar-h) + 16px)}
 .honor{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
 .honor .yr{font-size:12px;color:var(--cherenkov-deep);min-width:62px;padding-top:2px}
 .honor p{font-size:.94rem}
+.honor .ko{font-size:.85em}
 
 /* ---------- members ---------- */
 .member-group+.member-group{margin-top:48px}

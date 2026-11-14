@@ -41,7 +41,7 @@ education:
 
 # text에는 <cite> 같은 HTML을 쓸 수 있습니다
 honors:
-  - { year: "2026", text: "Best Paper Award, <cite>Nuclear Engineering and Technology</cite>, Korean Nuclear Society" }
+  - { year: "2026", text: '<span lang="ko">학회지 우수논문 금상, 한국원자력학회</span> (<a href="https://doi.org/10.1016/j.net.2023.06.009">paper</a>)' }
   - { year: "2025", text: "Grand Prize, Best Oral Presentation Awards, ASRAM 2025" }
   - { year: "2025", text: "Outstanding Doctoral Dissertation Award, Department of Nuclear Engineering, UNIST" }
   - { year: "2025", text: "Best Paper Award, 2024 KNS Fall Conference" }
