@@ -9,7 +9,10 @@ current:
   title: "2026"
   journals:
     - id: "pub-fdi"
-      status: "review"
+      status: "published"
+      year: 2026
+      venue: "Nuclear Engineering and Technology"
+      # doi: ""          # 링크가 나오면 주석을 풀고 DOI를 넣으면 제목에 링크가 걸립니다 (volume도 같은 방식)
       title: "False Data Injection Detection in Nuclear Power Plants using Autoencoder with Latent-Conditioned Mahalanobis Scoring"
       authors: "Junyong Bae, Ji Hyeon Shin, Seung Jun Lee"
       figure: "figures/thumbs/net-fdi.webp"
